@@ -6,7 +6,7 @@ export const Item = styled.li`
     flex-direction: column;
     align-items: center;
     list-style: none;
-    padding: 16px;
-    margin: 10px;
+    padding: 10px;
+    margin: 8px;
   `}
 `;
