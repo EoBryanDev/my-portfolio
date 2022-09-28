@@ -8,8 +8,8 @@ export const NavgationBar = styled.nav`
     background: ${theme.colors.primaryColor};
     height: 60px;
     color: ${theme.colors.whiteColor};
-    padding: 0 5px;
+    padding: 0 ${theme.spacings.paddings.small};
   `}
 
-  
+
 `;

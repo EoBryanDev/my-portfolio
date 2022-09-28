@@ -10,8 +10,8 @@ import * as Styled from './styles';
 
 import { MenuLink } from '../MenuLink';
 
-export const Menu = ({ toggled = true }) => (
-  <Styled.MenuComponent toggled={toggled}>
+export const Menu = ({ menuClose }) => (
+  <Styled.MenuComponent menuClose={menuClose}>
     <MenuLink>
       <FiHome />
       Home
@@ -34,12 +34,12 @@ export const Menu = ({ toggled = true }) => (
     </MenuLink>
     <MenuLink>
       <MdSend />
-      Contact Me
+      Contact
     </MenuLink>
   </Styled.MenuComponent>
 );
 
 Menu.propTypes = {
   //  children: P.node.isRequired,
-  toggled: P.bool.isRequired,
+  menuClose: P.bool.isRequired,
 };

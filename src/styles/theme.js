@@ -9,7 +9,7 @@ export const theme = {
     darkColor: '#575757',
   },
   fonts: {
-    primaryFont: 'Inter',
+    primaryFont: 'Arial',
   },
   fontWeights: {
     normal: '400',
@@ -43,5 +43,32 @@ export const theme = {
     mobile: '360px',
     tablet: '834px',
     desktop: '1440px',
+  },
+  spacings: {
+    paddings: {
+      small: '5px',
+      medium: '10px',
+      large: '15px',
+      xlarge: '20px',
+    },
+    margins: {
+      small: '5px',
+      medium: '10px',
+      large: '15px',
+      xlarge: '20px',
+    },
+  },
+  buttons: {
+    border: {
+      radius: '20px',
+    },
+    width: {
+      regular: '127px',
+      large: '270px',
+    },
+    heigth: {
+      regular: '57px',
+      large: '130px',
+    },
   },
 };

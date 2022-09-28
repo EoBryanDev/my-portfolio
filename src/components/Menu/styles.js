@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components';
 
 export const MenuComponent = styled.ul`
-  ${({ theme, toggled }) => css`
-    display: ${toggled ? 'flex' : 'none'};
+  ${({ theme, menuClose }) => css`
+    display: ${menuClose ? 'none' : 'flex'};
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 10px;
-    background: ${theme.colors.secondaryColor};
+    padding: ${theme.spacings.paddings.medium};
+    background: linear-gradient(180deg, #1363FF 22.4%, #3CFF4F 100%)
   `}
+
 `;

@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
 export const Item = styled.li`
-  ${() => css`
+  ${({ theme }) => css`
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
-    padding: 10px;
-    margin: 8px;
+    padding: ${theme.spacings.paddings.medium};
+    margin: ${theme.spacings.margins.medium};
   `}
 `;

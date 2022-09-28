@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { HomeSection } from '../../components/Home';
 
 import { Menu } from '../../components/Menu';
 import { Navbar } from '../../components/Navbar';
 
 function Home() {
+  const [menuClose, setMenuClose] = useState(true);
+
   return (
     <>
-      <Navbar />
-      <Menu />
-      <h1>Site is on Maintenace </h1>
-      <h1>Site is on Maintenace </h1>
+      <Navbar menuClose={menuClose} setMenuClose={setMenuClose} />
+      <Menu menuClose={menuClose} />
+      <HomeSection background />
     </>
   );
 }
