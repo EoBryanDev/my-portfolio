@@ -12,6 +12,7 @@ export const theme = {
     primaryFont: 'Arial',
   },
   fontWeights: {
+    thin: '100',
     normal: '400',
     bold: '700',
   },

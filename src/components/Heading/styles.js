@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const Title = styled.h1`
   ${({ theme, colorDark }) => css`
-    color: ${colorDark ? theme.colors.primaryColor : theme.colors.whiteColor};
+    font-size: ${theme.sizes.mobile.header};
+    color: ${colorDark ? theme.colors.blackColor : theme.colors.whiteColor};
+    margin-bottom: ${theme.spacings.margins.small};
   `}
 `;

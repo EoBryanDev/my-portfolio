@@ -1,12 +1,24 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  ${({ theme }) => css`
-  height: 90vh;
-  padding: ${theme.spacings.paddings.xlarge};
-  `}
+
+
+  h4{
+    margin: ${({ theme }) => theme.spacings.margins.xlarge} 0;
+    font-weight: ${({ theme }) => theme.fontWeights.thin};
+  }
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
+`;
+
+export const CheckOutMe = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+    color: ${({ theme }) => theme.colors.whiteColor}
+  }
 `;

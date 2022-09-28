@@ -2,8 +2,8 @@ import React from 'react';
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const Heading = ({ children, colorDark = true, as = 'h1' }) => (
-  <Styled.Title colorDark={colorDark} as={as}>
+export const Heading = ({ children, colorDark = true }) => (
+  <Styled.Title colorDark={colorDark}>
     {children}
   </Styled.Title>
 );
@@ -11,5 +11,4 @@ export const Heading = ({ children, colorDark = true, as = 'h1' }) => (
 Heading.propTypes = {
   children: P.node.isRequired,
   colorDark: P.bool.isRequired,
-  as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
 };

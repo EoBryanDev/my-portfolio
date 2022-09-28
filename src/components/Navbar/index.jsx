@@ -1,18 +1,21 @@
 import React from 'react';
-import { FiMenu } from 'react-icons/fi';
-import { GrClose } from 'react-icons/gr';
+
+import { IconContext } from 'react-icons';
+import { MdClear, MdReorder } from 'react-icons/md';
 import P from 'prop-types';
 import * as Styled from './styles';
 
 export const Navbar = ({ menuClose, setMenuClose }) => (
-  <Styled.NavgationBar menuClose={menuClose}>
-    <h1>Logo</h1>
-    <p>It&apos;s the Bryan</p>
-    {menuClose
-      ? <FiMenu onClick={() => setMenuClose(!menuClose)} />
-      : <GrClose onClick={() => setMenuClose(!menuClose)} />}
-
-  </Styled.NavgationBar>
+  // eslint-disable-next-line react/jsx-no-constructed-context-values
+  <IconContext.Provider value={{ size: '1.5em' }}>
+    <Styled.NavgationBar menuClose={menuClose}>
+      <h1>Logo</h1>
+      <p>It&apos;s the Bryan</p>
+      {menuClose
+        ? <MdReorder onClick={() => setMenuClose(!menuClose)} />
+        : <MdClear onClick={() => setMenuClose(!menuClose)} />}
+    </Styled.NavgationBar>
+  </IconContext.Provider>
 );
 
 Navbar.propTypes = {

@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const NavgationBar = styled.nav`
   ${({ theme }) => css`
+    position: sticky;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -9,7 +10,7 @@ export const NavgationBar = styled.nav`
     height: 60px;
     color: ${theme.colors.whiteColor};
     padding: 0 ${theme.spacings.paddings.small};
+    border-bottom: 1px solid ${theme.colors.lightColor};
   `}
-
 
 `;
