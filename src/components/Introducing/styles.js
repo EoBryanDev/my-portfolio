@@ -8,7 +8,12 @@ export const Story = styled.div`
     img{
       width: 100%;
     }
-  `}
-
+    h1{
+      font-size: ${theme.sizes.mobile.header};
+      color: ${theme.colors.darkColor};
+      text-shadow: ${theme.colors.secondaryColor} 2px 3px 2px;
+      letter-spacing: ${theme.letterSpacings.medium};
+      margin-bottom: ${theme.spacings.margins.large};
+    `}
 
 `;

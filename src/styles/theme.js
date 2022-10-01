@@ -11,6 +11,11 @@ export const theme = {
   fonts: {
     primaryFont: 'Arial',
   },
+  letterSpacings: {
+    thin: '1.5px',
+    medium: '2.5px',
+    large: '3.5px',
+  },
   fontWeights: {
     thin: '100',
     normal: '400',

@@ -3,14 +3,13 @@ import P from 'prop-types';
 import * as Styled from './styles';
 
 import Ilustration from '../../assets/programming_image.svg';
-import { Heading } from '../Heading';
 import { Resume } from '../Resume---';
 
 export const Introducing = ({ background }) => (
 
   <Styled.Story background={background}>
     <img src={Ilustration} alt="programming ilustration" />
-    <Heading>Hi, I&apos;m Bryan. Nice to meet you!</Heading>
+    <h1>Hi, I&apos;m Bryan. Nice to meet you!</h1>
     <article>
       <p>
         I&apos;m a front end developer with passion in problem solving and user experiences.

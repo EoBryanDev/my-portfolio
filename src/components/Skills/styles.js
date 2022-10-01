@@ -13,7 +13,9 @@ export const SliderCarrousel = styled.section`
     margin: 10px 0;
     text-align: justify;
   }
-  h3{
+  h3, h2{
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    letter-spacing: ${({ theme }) => theme.letterSpacings.thin};
     margin: 50px 0;
   }
 
@@ -35,7 +37,7 @@ ${({ theme }) => css`
   `}
 
   img{
-    width: 80%;
+    width: 100%;
   }
 
 `;

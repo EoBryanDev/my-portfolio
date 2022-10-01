@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { GoToTop } from '../../components/GoToTop';
 import { HomeSection } from '../../components/Home';
 import { Introducing } from '../../components/Introducing';
 
@@ -24,8 +25,15 @@ function Home() {
         <Skills />
       </Sections>
       <Sections background={false} id="section4">
-        <Skills />
+        Services
       </Sections>
+      <Sections background id="section5">
+        PortFolio
+      </Sections>
+      <Sections background={false} id="section6">
+        Get in touch
+      </Sections>
+      <GoToTop />
 
     </>
   );

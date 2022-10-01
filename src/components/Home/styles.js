@@ -6,7 +6,9 @@ export const Container = styled.div`
   h4{
     margin: ${({ theme }) => theme.spacings.margins.xlarge} 0;
     font-weight: ${({ theme }) => theme.fontWeights.thin};
+    color: ${({ theme }) => theme.colors.whiteColor}
   }
+
 `;
 
 export const ButtonContainer = styled.div`
