@@ -10,15 +10,15 @@ import { Heading } from '../Heading';
 
 export const HomeSection = () => (
   <Styled.Container>
-    <Heading>I DESIGN AND CODE SMART SOLUTIONS FOR YOU,</Heading>
-    <Heading>AND I LOVE IT.</Heading>
+    <Heading colorDark>I DESIGN AND CODE SMART SOLUTIONS FOR YOU,</Heading>
+    <Heading colorDark>AND I LOVE IT.</Heading>
     <h4>
       That&apos;s great when you really like to help each
       other and also you know how to do this with tech
     </h4>
     <img srcSet="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="avatar" style={{ width: '100%' }} />
     <Styled.ButtonContainer>
-      <ButtonShape>Let&apos;s Talk...</ButtonShape>
+      <ButtonShape background>Let&apos;s Talk...</ButtonShape>
       <ButtonShape background={false}>Portfolio</ButtonShape>
     </Styled.ButtonContainer>
     <Styled.CheckOutMe>

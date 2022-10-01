@@ -5,6 +5,7 @@ import { Introducing } from '../../components/Introducing';
 import { Menu } from '../../components/Menu';
 import { Navbar } from '../../components/Navbar';
 import { Sections } from '../../components/Sections';
+import { Skills } from '../../components/Skills';
 
 function Home() {
   const [menuClose, setMenuClose] = useState(true);
@@ -17,10 +18,13 @@ function Home() {
         <HomeSection />
       </Sections>
       <Sections background={false} id="section2">
-        <Introducing />
+        <Introducing background />
       </Sections>
       <Sections background id="section3">
-        Hello
+        <Skills />
+      </Sections>
+      <Sections background={false} id="section4">
+        <Skills />
       </Sections>
 
     </>

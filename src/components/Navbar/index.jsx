@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { IconContext } from 'react-icons';
-import { MdClear, MdReorder } from 'react-icons/md';
+import { MdClear, MdReorder, MdMoreVert } from 'react-icons/md';
 import P from 'prop-types';
 import * as Styled from './styles';
 
@@ -11,9 +11,17 @@ export const Navbar = ({ menuClose, setMenuClose }) => (
     <Styled.NavgationBar menuClose={menuClose}>
       <h1>Logo</h1>
       <p>It&apos;s the Bryan</p>
-      {menuClose
-        ? <MdReorder onClick={() => setMenuClose(!menuClose)} />
-        : <MdClear onClick={() => setMenuClose(!menuClose)} />}
+      <div>
+        <div>
+          {menuClose
+            ? <MdReorder onClick={() => setMenuClose(!menuClose)} />
+            : <MdClear onClick={() => setMenuClose(!menuClose)} />}
+        </div>
+        <div>
+
+          <MdMoreVert />
+        </div>
+      </div>
     </Styled.NavgationBar>
   </IconContext.Provider>
 );

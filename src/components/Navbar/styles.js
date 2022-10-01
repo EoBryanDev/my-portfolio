@@ -11,6 +11,12 @@ export const NavgationBar = styled.nav`
     color: ${theme.colors.whiteColor};
     padding: 0 ${theme.spacings.paddings.small};
     border-bottom: 1px solid ${theme.colors.lightColor};
+
+    & div {
+      display: flex;
+      padding: 3px;
+    }
   `}
+
 
 `;
