@@ -12,7 +12,7 @@ import * as Styled from './styles';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { carrouselItens } from './mock';
+import { carrouselItens, images } from './mock';
 
 const settings = {
   dots: true,
@@ -20,6 +20,17 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  arrows: false,
+};
+const settingsSmallCarrousel = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1500,
+  autoplaySpeed: 0,
+  cssEase: 'linear',
   arrows: false,
 };
 
@@ -36,10 +47,10 @@ export const Skills = () => (
             <p>{item.paragraph}</p>
             <h3>Techs that I enjoy to work:</h3>
             <Styled.TechSlider>
-              <Slider {...settings}>
-                <div>
-                  <img src={item.techs[0]} alt={item.techs.alt} />
-                </div>
+              <Slider {...settingsSmallCarrousel}>
+                {images.map((img) => (img.techNum === item.id
+                  ? <div key={img.id}><img src={img.url} alt={img.alt} /></div>
+                  : ''))}
               </Slider>
             </Styled.TechSlider>
           </div>

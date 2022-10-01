@@ -11,6 +11,7 @@ export const SliderCarrousel = styled.section`
 
   p{
     margin: 10px 0;
+    text-align: justify;
   }
   h3{
     margin: 50px 0;
@@ -40,14 +41,18 @@ ${({ theme }) => css`
 `;
 export const TechSlider = styled.div`
 ${() => css`
+  border-radius: 10px;
   background-color: white;
 
-  height: 100%;
+  height: 70px;
+  padding: 5px 10px;
+
   margin-top: 30px;
   margin-bottom: 30px;
 
   img{
-    width: 20%;
+    margin-top: 10px;
+    width: 50%;
   }
   `}
 `;
