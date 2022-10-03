@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { GoToTop } from '../../components/GoToTop';
+
+import GoToTop from '../../components/GoToTop';
 import { HomeSection } from '../../components/Home';
 import { Introducing } from '../../components/Introducing';
 
@@ -34,7 +35,6 @@ function Home() {
         Get in touch
       </Sections>
       <GoToTop />
-
     </>
   );
 }
