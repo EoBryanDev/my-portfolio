@@ -1,6 +1,4 @@
 /* eslint-disable react/jsx-no-useless-fragment */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useEffect, useState } from 'react';
 import { MdNorth } from 'react-icons/md';
 

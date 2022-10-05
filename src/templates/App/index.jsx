@@ -7,6 +7,7 @@ import { Introducing } from '../../components/Introducing';
 import { Menu } from '../../components/Menu';
 import { Navbar } from '../../components/Navbar';
 import { Sections } from '../../components/Sections';
+import { Services } from '../../components/Services---';
 import { Skills } from '../../components/Skills';
 
 function Home() {
@@ -26,7 +27,7 @@ function Home() {
         <Skills />
       </Sections>
       <Sections background={false} id="section4">
-        Services
+        <Services />
       </Sections>
       <Sections background id="section5">
         PortFolio
