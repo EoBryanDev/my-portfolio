@@ -3,7 +3,6 @@ import P from 'prop-types';
 import * as Styled from './styles';
 
 import Ilustration from '../../assets/programming_image.svg';
-import { Resume } from '../Resume---';
 
 export const Introducing = ({ background }) => (
 
@@ -27,7 +26,6 @@ export const Introducing = ({ background }) => (
         Engeeniring Bacharelors.
       </p>
     </article>
-    <Resume>Check out my resumè</Resume>
   </Styled.Story>
 );
 

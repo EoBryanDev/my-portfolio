@@ -8,6 +8,7 @@ import { Menu } from '../../components/Menu';
 import { Navbar } from '../../components/Navbar';
 import { Sections } from '../../components/Sections';
 import { Services } from '../../components/Services---';
+import { Resume } from '../../components/Resume---';
 import { Skills } from '../../components/Skills';
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
       </Sections>
       <Sections background={false} id="section2">
         <Introducing background />
+        <Resume>Check out my resumè</Resume>
       </Sections>
       <Sections background id="section3">
         <Skills />

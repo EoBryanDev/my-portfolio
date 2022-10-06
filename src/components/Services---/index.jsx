@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable semi */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
@@ -7,6 +9,8 @@ import * as Styled from './styles';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import { services } from './mock';
 import { ButtonShape } from '../Button';
 
 const settings = {
@@ -21,22 +25,19 @@ const settings = {
 export const Services = () => (
   <Styled.BackgroundSlider>
     <Slider {...settings}>
-      <div>
-        <Styled.ServiceImg>
-        </Styled.ServiceImg>
-        <Styled.BackgroundServices>
-          <li>Standard solution - Website non-functional</li>
-          <li>User interface, SPA and redirecting to external sale conversions</li>
-        </Styled.BackgroundServices>
-        <ButtonShape>See More...</ButtonShape>
-      </div>
-      <div>
-        <h3>Logotipo</h3>
-        <ul>
-          <li>Standard solution - Website non-functional</li>
-          <li>User interface, SPA and redirecting to external sale conversions</li>
-        </ul>
-      </div>
+      {services.map((service) => (
+        <div key={service.id}>
+          <Styled.ServiceImg>
+            <img src={service.url} alt={service.alt} />
+          </Styled.ServiceImg>
+          <h2>{service.title}</h2>
+          <Styled.BackgroundServices>
+            <li><h3>{service.itens[0]}</h3></li>
+            <li>{service.itens[1]}</li>
+          </Styled.BackgroundServices>
+          <ButtonShape>See More...</ButtonShape>
+        </div>
+      ))}
     </Slider>
   </Styled.BackgroundSlider>
 );
