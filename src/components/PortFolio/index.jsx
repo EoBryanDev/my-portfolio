@@ -25,8 +25,10 @@ export const PortFolio = () => (
       <Slider {...settings}>
         <div>
           <Styled.Cover>
-            <h3>Personal Portfolio 1.0</h3>
             <img src={Test} alt="Cover" />
+            <div className="title_overlay title_overlay--blur">
+              <h3>Personal Portfolio 1.0</h3>
+            </div>
           </Styled.Cover>
           <Styled.ProjectNav>
             <button type="submit">Visit</button>

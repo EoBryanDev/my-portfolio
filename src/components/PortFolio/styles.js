@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.section`
-  ${({ theme }) => css`
-    height: 300px;
-    background-color: ${theme.colors.lightColor};
+  ${() => css`
     border-radius: 10px;
     text-align: center;
     padding: 20px;
@@ -14,38 +12,75 @@ export const Container = styled.section`
     text-align: justify;
   }
   h3, h2{
-    color: ${({ theme }) => theme.colors.secondaryColor};
+    color: ${({ theme }) => theme.colors.lightColor};
+    text-shadow: ${({ theme }) => theme.colors.darkColor} 2px 3px 2px;
     letter-spacing: ${({ theme }) => theme.letterSpacings.thin};
-    margin: 50px 0;
+    margin: 20px 0;
   }
 `;
 export const SliderContainer = styled.article`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.darkColor};
-    height: 200px;
+  ${() => css`
     border-radius: 10px;
+    border: 1px solid;
   `}
 `;
+
 export const Cover = styled.div`
   margin-top: 10px;
   display:flex;
   justify-content: center;
+  position: relative;
+
   img{
+    position: block;
     border-radius: 5px;
     width: 90%;
     filter: grayscale(1);
   }
+  .title_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .title_overlay--blur {
+    backdrop-filter: blur(5px);
+  }
+  .title_overlay:hover {
+    opacity: 1;
+  }
+
+  .title_overlay > *{
+    transform: translateY(-20px);
+    transition: transform 0.25s;
+  }
+
+  .title_overlay:hover{
+    transform: translateY(0);
+  }
+
   img:hover{
     filter: grayscale(0);
   }
 `;
+
 export const ProjectNav = styled.div`
+  padding: 0 10px;
   margin: 20px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   img{
-    width: 25%;
+    width: 15%;
   }
   button{
     border: none;
