@@ -10,6 +10,7 @@ import { Sections } from '../../components/Sections';
 import { Services } from '../../components/Services---';
 import { Resume } from '../../components/Resume---';
 import { Skills } from '../../components/Skills';
+import { PortFolio } from '../../components/PortFolio';
 
 function Home() {
   const [menuClose, setMenuClose] = useState(true);
@@ -18,23 +19,23 @@ function Home() {
     <>
       <Navbar menuClose={menuClose} setMenuClose={setMenuClose} />
       <Menu menuClose={menuClose} />
-      <Sections background id="section1">
+      <Sections background id="section1" int>
         <HomeSection />
       </Sections>
-      <Sections background={false} id="section2">
+      <Sections background={false} id="section2" int>
         <Introducing background />
         <Resume>Check out my resumè</Resume>
       </Sections>
-      <Sections background id="section3">
+      <Sections background id="section3" int>
         <Skills />
       </Sections>
-      <Sections background={false} id="section4">
+      <Sections background={false} id="section4" int>
         <Services />
       </Sections>
-      <Sections background id="section5">
-        PortFolio
+      <Sections background id="section5" int={false}>
+        <PortFolio />
       </Sections>
-      <Sections background={false} id="section6">
+      <Sections background={false} id="section6" int={false}>
         Get in touch
       </Sections>
       <GoToTop />
