@@ -21,7 +21,6 @@ export const Container = styled.section`
 export const SliderContainer = styled.article`
   ${() => css`
     border-radius: 10px;
-    background: linear-gradient(180deg, #1363FF 22.4%, #3CFF4F 100%);
     height: 400px;
   `}
 `;
@@ -81,7 +80,7 @@ export const ProjectNav = styled.div`
   justify-content: space-around;
   align-items: center;
   img{
-    width: 15%;
+    width: 10%;
   }
   button{
     border: none;

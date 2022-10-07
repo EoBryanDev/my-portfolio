@@ -5,7 +5,12 @@ import { MdClear, MdReorder, MdMoreVert } from 'react-icons/md';
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const Navbar = ({ menuClose, setMenuClose }) => (
+export const Navbar = ({
+  menuClose,
+  setMenuClose,
+  settingsClose,
+  setSettingsClose,
+}) => (
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   <IconContext.Provider value={{ size: '1.5em' }}>
     <Styled.NavgationBar menuClose={menuClose}>
@@ -18,8 +23,9 @@ export const Navbar = ({ menuClose, setMenuClose }) => (
             : <MdClear onClick={() => setMenuClose(!menuClose)} />}
         </div>
         <div>
-
-          <MdMoreVert />
+          {settingsClose
+            ? <MdMoreVert onClick={() => setSettingsClose(!settingsClose)} />
+            : <MdClear onClick={() => setSettingsClose(!settingsClose)} />}
         </div>
       </div>
     </Styled.NavgationBar>
@@ -29,4 +35,6 @@ export const Navbar = ({ menuClose, setMenuClose }) => (
 Navbar.propTypes = {
   menuClose: P.bool.isRequired,
   setMenuClose: P.node.isRequired,
+  settingsClose: P.bool.isRequired,
+  setSettingsClose: P.node.isRequired,
 };

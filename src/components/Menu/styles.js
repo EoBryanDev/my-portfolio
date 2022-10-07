@@ -9,7 +9,9 @@ export const MenuComponent = styled.ul`
   justify-content: space-around;
   flex-wrap: wrap;
   padding: ${theme.spacings.paddings.medium};
-  background: linear-gradient(180deg, #1363FF 22.4%, #3CFF4F 100%);
+  backdrop-filter: blur(5px);
+  background: ${theme.colors.secondaryColor};
+  color: ${theme.colors.blackColor};
   transition: all 0.3s ease-in-out;
   `}
 

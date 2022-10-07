@@ -13,14 +13,21 @@ import { Skills } from '../../components/Skills';
 import { PortFolio } from '../../components/PortFolio';
 import { Footer } from '../../components/Footer';
 import { ContactMe } from '../../components/ContactMe';
+import { Settings } from '../../components/Settings';
 
 function Home() {
   const [menuClose, setMenuClose] = useState(true);
-
+  const [settingsClose, setSettingsClose] = useState(true);
   return (
     <>
-      <Navbar menuClose={menuClose} setMenuClose={setMenuClose} />
+      <Navbar
+        menuClose={menuClose}
+        setMenuClose={setMenuClose}
+        settingsClose={settingsClose}
+        setSettingsClose={setSettingsClose}
+      />
       <Menu menuClose={menuClose} />
+      <Settings settingsClose={settingsClose} />
       <Sections background id="section1" int>
         <HomeSection />
       </Sections>
