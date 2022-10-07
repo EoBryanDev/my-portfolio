@@ -21,7 +21,8 @@ export const Container = styled.section`
 export const SliderContainer = styled.article`
   ${() => css`
     border-radius: 10px;
-    border: 1px solid;
+    background: linear-gradient(180deg, #1363FF 22.4%, #3CFF4F 100%);
+    height: 400px;
   `}
 `;
 

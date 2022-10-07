@@ -9,6 +9,8 @@ import * as Styled from './styles';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import { portFolio } from './mock';
+
 const settings = {
   dots: true,
   infinite: true,
@@ -23,23 +25,20 @@ export const PortFolio = () => (
     <h2>What I&apos;ve been working on</h2>
     <Styled.SliderContainer>
       <Slider {...settings}>
-        <div>
-          <Styled.Cover>
-            <img src={Test} alt="Cover" />
-            <div className="title_overlay title_overlay--blur">
-              <h3>Personal Portfolio 1.0</h3>
-            </div>
-          </Styled.Cover>
-          <Styled.ProjectNav>
-            <button type="submit">Visit</button>
-            <img src={Test} alt="Cover" />
-            <img src={Test} alt="Cover" />
-            <img src={Test} alt="Cover" />
-          </Styled.ProjectNav>
-        </div>
-        <div>
-          Test2
-        </div>
+        {portFolio.map((item) => (
+          <div key={item.id}>
+            <Styled.Cover>
+              <img src={Test} alt="Cover" />
+              <div className="title_overlay title_overlay--blur">
+                <h3>{item.title}</h3>
+              </div>
+            </Styled.Cover>
+            <Styled.ProjectNav>
+              <button type="submit">Visit</button>
+              {item.techs.map((itens) => <img src={itens.url} alt={itens.alt} />)}
+            </Styled.ProjectNav>
+          </div>
+        ))}
       </Slider>
     </Styled.SliderContainer>
   </Styled.Container>

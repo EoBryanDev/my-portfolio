@@ -11,6 +11,8 @@ import { Services } from '../../components/Services---';
 import { Resume } from '../../components/Resume---';
 import { Skills } from '../../components/Skills';
 import { PortFolio } from '../../components/PortFolio';
+import { Footer } from '../../components/Footer';
+import { ContactMe } from '../../components/ContactMe';
 
 function Home() {
   const [menuClose, setMenuClose] = useState(true);
@@ -36,8 +38,9 @@ function Home() {
         <PortFolio />
       </Sections>
       <Sections background={false} id="section6" int={false}>
-        Get in touch
+        <ContactMe />
       </Sections>
+      <Footer>Handcraft by me 2022</Footer>
       <GoToTop />
     </>
   );
