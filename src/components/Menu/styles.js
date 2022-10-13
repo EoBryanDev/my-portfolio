@@ -11,7 +11,7 @@ export const MenuComponent = styled.ul`
   padding: ${theme.spacings.paddings.medium};
   backdrop-filter: blur(5px);
   background: ${theme.colors.secondaryColor};
-  color: ${theme.colors.blackColor};
+  color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.blackColor};
   transition: all 0.3s ease-in-out;
   `}
 

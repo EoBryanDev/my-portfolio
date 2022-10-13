@@ -8,7 +8,7 @@ export const NavgationBar = styled.nav`
     align-items: center;
     background: ${theme.colors.primaryColor};
     height: 60px;
-    color: ${theme.colors.whiteColor};
+    color: ${theme.colors.lightColor};
     padding: 0 ${theme.spacings.paddings.small};
     border-bottom: 1px solid ${theme.colors.lightColor};
 

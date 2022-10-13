@@ -5,8 +5,9 @@ export const ResumeButton = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${theme.colors.darkColor};
-    color: ${theme.colors.lightColor};
+    background-color: ${theme.colors.secondaryColor};
+    color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.lightColor};
+    border-radius: 5px;
     height: 40px;
     font-size: 20px;
     margin-top: 30%;

@@ -1,13 +1,16 @@
 const darkTheme = {
   name: 'dark',
   colors: {
-    primaryColor: '#fff',
-    secondaryColor: '#383838',
-    thirdColor: '#1e1e1e',
-    lightColor: '#1e1e1e',
+    primaryColor: '#575757',
+    secondaryColor: '#3CFF4F',
+    thirdColor: '#1363FF',
+    whiteColor: '#FFFFFF',
+    blackColor: '#000000',
+    lightColor: '#DFDFDF',
+    darkColor: '#575757',
 
-    backgroundColor: '#121212',
-    textColor: '#fff',
+    backgroundColor: '#7209b7',
+    textColor: '#000000',
   },
   fonts: {
     primaryFont: 'Arial',

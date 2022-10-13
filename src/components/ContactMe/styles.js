@@ -11,7 +11,10 @@ export const Container = styled.section`
     text-align: center;
 
     h2{
-      color: ${theme.colors.darkColor};
+      color: ${theme.name === 'dark' ? theme.colors.lightColor : theme.colors.darkColor};
+    }
+    p{
+      color: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.textColor};
     }
   `}
 `;

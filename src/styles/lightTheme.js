@@ -1,6 +1,7 @@
 const lightTheme = {
   name: 'light',
   colors: {
+    /*   #7209b7 */
     primaryColor: '#1363FF',
     secondaryColor: '#18CDFD',
     thirdColor: '#3CFF4F',
@@ -10,7 +11,7 @@ const lightTheme = {
     darkColor: '#575757',
 
     backgroundColor: '#fff',
-    textColor: '#000000',
+    textColor: '#7209b7',
   },
   fonts: {
     primaryFont: 'Arial',
