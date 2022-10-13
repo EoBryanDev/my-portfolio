@@ -1,4 +1,5 @@
-export const theme = {
+const lightTheme = {
+  name: 'light',
   colors: {
     primaryColor: '#1363FF',
     secondaryColor: '#18CDFD',
@@ -7,6 +8,9 @@ export const theme = {
     blackColor: '#000000',
     lightColor: '#DFDFDF',
     darkColor: '#575757',
+
+    backgroundColor: '#fff',
+    textColor: '#000000',
   },
   fonts: {
     primaryFont: 'Arial',
@@ -78,3 +82,5 @@ export const theme = {
     },
   },
 };
+
+export default lightTheme;

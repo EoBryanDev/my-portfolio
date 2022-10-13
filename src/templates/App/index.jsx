@@ -1,9 +1,14 @@
+/* eslint-disable no-unused-expressions */
 import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 
-import GoToTop from '../../components/GoToTop';
+import lightTheme from '../../styles/lightTheme';
+import darkTheme from '../../styles/darkTheme';
+
 import { HomeSection } from '../../components/Home';
 import { Introducing } from '../../components/Introducing';
 
+import GoToTop from '../../components/GoToTop';
 import { Menu } from '../../components/Menu';
 import { Navbar } from '../../components/Navbar';
 import { Sections } from '../../components/Sections';
@@ -13,13 +18,20 @@ import { Skills } from '../../components/Skills';
 import { PortFolio } from '../../components/PortFolio';
 import { Footer } from '../../components/Footer';
 import { ContactMe } from '../../components/ContactMe';
-import { Settings } from '../../components/Settings';
+import Settings from '../../components/Settings';
+import { GlobalStyles } from '../../styles/global-styles';
 
 function Home() {
   const [menuClose, setMenuClose] = useState(true);
   const [settingsClose, setSettingsClose] = useState(true);
+
+  const [theme, setTheme] = useState(lightTheme);
+
+  const onChangeTheme = () => {
+    setTheme(theme.name === 'light' ? darkTheme : lightTheme);
+  };
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Navbar
         menuClose={menuClose}
         setMenuClose={setMenuClose}
@@ -27,7 +39,7 @@ function Home() {
         setSettingsClose={setSettingsClose}
       />
       <Menu menuClose={menuClose} />
-      <Settings settingsClose={settingsClose} />
+      <Settings settingsClose={settingsClose} onChangeTheme={onChangeTheme} />
       <Sections background id="section1" int>
         <HomeSection />
       </Sections>
@@ -49,7 +61,8 @@ function Home() {
       </Sections>
       <Footer>Handcraft by me 2022</Footer>
       <GoToTop />
-    </>
+      <GlobalStyles />
+    </ThemeProvider>
   );
 }
 

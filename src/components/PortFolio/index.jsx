@@ -35,7 +35,9 @@ export const PortFolio = () => (
             </Styled.Cover>
             <Styled.ProjectNav>
               <button type="submit">Visit</button>
-              {item.techs.map((itens) => <img src={itens.url} alt={itens.alt} />)}
+              {item.techs.map((itens) => (
+                <img src={itens.url} alt={itens.alt} key={itens.id} />
+              ))}
             </Styled.ProjectNav>
           </div>
         ))}

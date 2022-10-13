@@ -1,3 +1,4 @@
+/* eslint-disable no-confusing-arrow */
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
@@ -13,9 +14,11 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 16px;
-    font-family: ${({ theme }) => theme.fonts.primaryFont}, 'sans-serif';
-    color: ${({ theme }) => theme.colors.blackColor};
-    background: linear-gradient(180deg, #1363FF 22.4%, #3CFF4F 100%)
+    font-family: ${(props) => props.theme.fonts.primaryFont}, 'sans-serif';
+    color:  ${(props) => props.theme.colors.blackColor};
+    background: linear-gradient(
+      180deg, ${(props) => props.theme.colors.primaryColor}
+      22.4%, ${(props) => props.theme.colors.thirdColor} 100%)
   }
 
   h1{
