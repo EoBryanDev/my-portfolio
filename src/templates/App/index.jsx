@@ -8,12 +8,12 @@ import darkTheme from '../../styles/darkTheme';
 import { HomeSection } from '../../components/Home';
 import { Introducing } from '../../components/Introducing';
 
-import GoToTop from '../../components/GoToTop';
 import { Menu } from '../../components/Menu';
 import { Navbar } from '../../components/Navbar';
 import { Sections } from '../../components/Sections';
-import { Services } from '../../components/Services---';
 import { Resume } from '../../components/Resume---';
+import GoToTop from '../../components/GoToTop';
+import { Services } from '../../components/Services---';
 import { Skills } from '../../components/Skills';
 import { PortFolio } from '../../components/PortFolio';
 import { Footer } from '../../components/Footer';

@@ -1,12 +1,10 @@
 import React from 'react';
-import P from 'prop-types';
 import * as Styled from './styles';
 
 import Ilustration from '../../assets/programming_image.svg';
 
-export const Introducing = ({ background }) => (
-
-  <Styled.Story background={background}>
+export const Introducing = () => (
+  <Styled.Story>
     <img src={Ilustration} alt="programming ilustration" />
     <h1>Hi, I&apos;m Bryan. Nice to meet you!</h1>
     <article>
@@ -28,7 +26,3 @@ export const Introducing = ({ background }) => (
     </article>
   </Styled.Story>
 );
-
-Introducing.propTypes = {
-  background: P.bool.isRequired,
-};

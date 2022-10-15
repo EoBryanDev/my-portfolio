@@ -3,21 +3,22 @@ import styled, { css } from 'styled-components';
 export const SliderCarrousel = styled.section`
   ${({ theme }) => css`
     height: 80%;
-    background-color: ${theme.colors.lightColor};
+    background-color: ${theme.name === 'dark' ? theme.colors.blackColor : theme.colors.lightColor};
     border-radius: 10px;
     text-align: center;
     padding: 10px;
+
+    h3, h2{
+      color: ${theme.colors.secondaryColor};
+      letter-spacing: ${theme.letterSpacings.thin};
+      margin: 50px 0;
+    }
+    p{
+      margin: 10px 0;
+      text-align: justify;
+    }
   `}
 
-  p{
-    margin: 10px 0;
-    text-align: justify;
-  }
-  h3, h2{
-    color: ${({ theme }) => theme.colors.secondaryColor};
-    letter-spacing: ${({ theme }) => theme.letterSpacings.thin};
-    margin: 50px 0;
-  }
 
 `;
 
@@ -30,7 +31,8 @@ ${({ theme }) => css`
   height: 120px;
   width: 120px;
   background-color: ${theme.colors.whiteColor};
-  border-radius:50%;
+  border-radius: 50%;
+  border: ${theme.name === 'dark' && ('20px solid white')};
   margin-top: 30px;
   margin-bottom: 30px;
 

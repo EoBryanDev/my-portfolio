@@ -9,7 +9,7 @@ export const Icon = styled.button`
     bottom: 30px;
     right: 30px;
 
-    background-color: ${theme.colors.primaryColor};
+    background-color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.secondaryColor};
     color: ${theme.colors.whiteColor};
     font-size: 20px;
     font-weight: 700;
@@ -17,12 +17,12 @@ export const Icon = styled.button`
     width: 50px;
     border-radius: 50%;
     border: none;
-    box-shadow: 2px 2px ${theme.colors.darkColor};
+    box-shadow: 1px 1px ${theme.colors.darkColor};
 
-    &:active{
+    &:active, &:hover{
       background-color: ${theme.colors.whiteColor};
-      color: ${theme.colors.primaryColor};
-      box-shadow: 2px 2px ${theme.colors.primaryColor};
+      color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.secondaryColor};
+      box-shadow: 1px 1px ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.secondaryColor};
     }
   `}
 `;

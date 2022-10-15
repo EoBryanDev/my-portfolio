@@ -1,8 +1,9 @@
 const darkTheme = {
   name: 'dark',
   colors: {
-    primaryColor: '#575757',
-    secondaryColor: '#3CFF4F',
+    primaryColor: '#000000',
+    secondaryColor: '#18CDFD',
+    secondaryAltColor: '#38B8DC',
     thirdColor: '#1363FF',
     whiteColor: '#FFFFFF',
     blackColor: '#000000',

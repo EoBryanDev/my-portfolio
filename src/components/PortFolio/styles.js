@@ -12,7 +12,7 @@ export const Container = styled.section`
     text-align: justify;
   }
   h3, h2{
-    color: ${({ theme }) => theme.colors.lightColor};
+    color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.lightColor)};
     text-shadow: ${({ theme }) => theme.colors.darkColor} 2px 3px 2px;
     letter-spacing: ${({ theme }) => theme.letterSpacings.thin};
     margin: 20px 0;
@@ -81,11 +81,5 @@ export const ProjectNav = styled.div`
   align-items: center;
   img{
     width: 10%;
-  }
-  button{
-    border: none;
-    border-radius: 10px;
-    width: 50px;
-    height: 40px;
   }
 `;

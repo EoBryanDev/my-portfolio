@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import P from 'prop-types';
 import Switch from 'react-switch';
-//  import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
+import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { ThemeContext } from 'styled-components';
 import * as Styled from './styles';
 
@@ -10,18 +10,20 @@ const Settings = ({ settingsClose, onChangeTheme }) => {
   const { name, colors } = useContext(ThemeContext);
   return (
     <Styled.Container settingsClose={settingsClose}>
-      <h2>{name}</h2>
+      {name === 'light' ? 'Light Mode' : 'Dark Mode'}
+      <MdOutlineDarkMode />
       <Switch
         onChange={onChangeTheme}
         checked={name === 'light'}
         height={20}
-        width={40}
+        width={50}
         checkedIcon={false}
         uncheckedIcon={false}
-        handleDiameter={20}
+        handleDiameter={30}
         offColor={colors.secondaryColor}
-        onColor={colors.secondaryColor}
+        onColor={colors.darkColor}
       />
+      <MdOutlineLightMode />
     </Styled.Container>
   );
 };

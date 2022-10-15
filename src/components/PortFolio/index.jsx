@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { portFolio } from './mock';
+import { ButtonShape } from '../Button';
 
 const settings = {
   dots: true,
@@ -34,7 +35,7 @@ export const PortFolio = () => (
               </div>
             </Styled.Cover>
             <Styled.ProjectNav>
-              <button type="submit">Visit</button>
+              <ButtonShape type="submit">Visit</ButtonShape>
               {item.techs.map((itens) => (
                 <img src={itens.url} alt={itens.alt} key={itens.id} />
               ))}

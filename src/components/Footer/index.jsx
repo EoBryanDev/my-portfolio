@@ -4,7 +4,7 @@ import * as Styled from './styles';
 
 export const Footer = ({ children }) => (
   <Styled.Container>
-    <h4>{children}</h4>
+    {children}
   </Styled.Container>
 );
 

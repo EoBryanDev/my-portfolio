@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components';
 export const MenuComponent = styled.ul`
   ${({ theme, menuClose }) => css`
   display: flex;
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   opacity: ${menuClose ? '0' : 'auto'};
   align-items: center;
   justify-content: space-around;

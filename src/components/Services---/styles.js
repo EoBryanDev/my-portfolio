@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const BackgroundSlider = styled.section`
   ${({ theme }) => css`
     height: 85%;
-    background-color: ${theme.colors.secondaryColor};
+    background-color: ${theme.name === 'dark' ? theme.colors.backgroundColor : theme.colors.secondaryColor};
     border-radius: 10px;
     text-align: center;
     padding: 10px;
@@ -17,7 +17,7 @@ export const BackgroundSlider = styled.section`
     margin: 50px 0;
   }
   h2, h3{
-    color: ${({ theme }) => theme.colors.darkColor};
+    color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.darkColor)};
     letter-spacing: ${({ theme }) => theme.letterSpacings.thin};
   }
 `;
