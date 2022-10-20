@@ -7,7 +7,7 @@ import { BsInstagram, BsGithub, BsWhatsapp } from 'react-icons/bs';
 import * as Styled from './styles';
 import { ButtonShape } from '../Button';
 import { Heading } from '../Heading';
-
+/*  //live.staticflickr.com/65535/52441955023_4783f05112_z.jpg  */
 export const HomeSection = () => (
   <Styled.Container>
     <Heading colorDark>I DESIGN AND CODE SMART SOLUTIONS FOR YOU,</Heading>
@@ -16,7 +16,7 @@ export const HomeSection = () => (
       That&apos;s great when you really like to help each
       other and also you know how to do this with tech
     </h4>
-    <img srcSet="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="avatar" style={{ width: '100%' }} />
+    <img srcSet="https://live.staticflickr.com/65535/52441885335_b3dbb885bc_n.jpg" alt="avatar" style={{ width: '100%', borderRadius: '50%' }} />
     <Styled.ButtonContainer>
       <ButtonShape background>Let&apos;s Talk...</ButtonShape>
       <ButtonShape background={false}>Portfolio</ButtonShape>

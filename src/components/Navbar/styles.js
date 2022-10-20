@@ -19,6 +19,13 @@ export const NavgationBar = styled.nav`
       display: flex;
       padding: 3px;
     }
+    /*  Include some way to resize menu in the right way   */
+  @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+    background-color: black;
+  }
+  @media only screen and (min-width: ${theme.deviceSizes.desktop}){
+    background-color: green;
+  }
   `}
 
 

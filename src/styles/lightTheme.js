@@ -14,7 +14,8 @@ const lightTheme = {
     textColor: '#7209b7',
   },
   fonts: {
-    primaryFont: 'Arial',
+    primaryFont: 'Inter',
+    secondaryFont: 'Roboto Condensed',
   },
   letterSpacings: {
     thin: '1.5px',
