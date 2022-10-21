@@ -21,27 +21,9 @@ export const images = [
   },
   {
     techNum: 1,
-    id: 17,
-    url: 'https://cdn-icons-png.flaticon.com/512/5968/5968381.png',
-    alt: 'typescript',
-  },
-  {
-    techNum: 1,
     id: 4,
     url: 'https://cdn-icons-png.flaticon.com/512/919/919851.png',
     alt: 'react js',
-  },
-  {
-    techNum: 1,
-    id: 11,
-    url: 'https://img.icons8.com/color/344/vue-js.png',
-    alt: 'vue',
-  },
-  {
-    techNum: 1,
-    id: 12,
-    url: 'https://img.icons8.com/fluency/344/github.png',
-    alt: 'vue',
   },
   {
     techNum: 2,
@@ -80,6 +62,18 @@ export const images = [
     alt: 'java',
   },
   {
+    techNum: 1,
+    id: 11,
+    url: 'https://img.icons8.com/color/344/vue-js.png',
+    alt: 'vue',
+  },
+  {
+    techNum: 1,
+    id: 12,
+    url: 'https://img.icons8.com/fluency/344/github.png',
+    alt: 'github',
+  },
+  {
     techNum: 3,
     id: 13,
     url: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png',
@@ -102,6 +96,24 @@ export const images = [
     id: 16,
     url: 'https://cdn-icons-png.flaticon.com/512/5968/5968705.png',
     alt: 'figma',
+  },
+  {
+    techNum: 1,
+    id: 17,
+    url: 'https://cdn-icons-png.flaticon.com/512/5968/5968381.png',
+    alt: 'typescript',
+  },
+  {
+    techNum: 1,
+    id: 18,
+    url: 'https://img.icons8.com/color/344/redux.png',
+    alt: 'redux',
+  },
+  {
+    techNum: 1,
+    id: 19,
+    url: 'https://www.styled-components.com/atom.png',
+    alt: 'styled component',
   },
 ];
 

@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-
+${({ theme }) => css`
 
   h4{
-    margin: ${({ theme }) => theme.spacings.margins.xlarge} 0 0 0;
-    font-weight: ${({ theme }) => theme.fontWeights.thin};
-    color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.whiteColor)}
+    margin: ${theme.spacings.margins.xlarge} 0 0 0;
+    font-weight: ${theme.fontWeights.thin};
+    color: ${(theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.whiteColor)}
   }
 
   .profile{
@@ -17,6 +17,24 @@ export const Container = styled.div`
     transition: all 1s ease-in-out;
 
   }
+  @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+    //  add display flex and divide colunmns
+    .profile{
+    width: 45%;
+    margin-left: 40%;
+
+  }
+
+  @media only screen and (min-width: ${theme.deviceSizes.desktop}){
+
+  }
+  .react-icons {
+    color: #FFFFFF;
+  }
+  .react-icons:hover {
+    color: ${(theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.thirdColor)};
+  }
+  `}
 `;
 
 export const ButtonContainer = styled.div`
@@ -26,15 +44,17 @@ export const ButtonContainer = styled.div`
 `;
 
 export const CheckOutMe = styled.div`
+${({ theme }) => css`
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.lightColor)}
+  color: ${theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.lightColor}
 
+  `}
 `;
 
 export const Bloob = styled.div`
-
   ${({ theme }) => css`
     position: absolute;
     z-index: -1;
@@ -46,7 +66,12 @@ export const Bloob = styled.div`
     border-radius: 83% 17% 95% 5% / 36% 58% 42% 64% ;
     box-shadow:  ${theme.name === 'dark' ? theme.colors.whiteColor
     : theme.colors.secondaryColor} 1px 5px 20px 20px;
+
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+      width: 340px;
+      top: 420px;
+      right: 150px;
+      height: 400px;
+    }
   `}
-
-
 `;

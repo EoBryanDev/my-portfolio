@@ -23,8 +23,8 @@ export const portFolio = [
       },
       {
         name: 'react',
-        url: images[4].url,
-        alt: images[4].alt,
+        url: images[3].url,
+        alt: images[3].alt,
       },
     ],
   },

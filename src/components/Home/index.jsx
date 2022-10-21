@@ -28,7 +28,7 @@ export const HomeSection = ({ theme }) => (
     </Styled.ButtonContainer>
     <Styled.CheckOutMe>
       <p>Check Out Me: </p>
-      <IconContext.Provider value={{ size: '20px' }}>
+      <IconContext.Provider value={{ size: '20px', className: 'react-icons' }}>
         <BsInstagram />
         <BsGithub />
         <BsWhatsapp />

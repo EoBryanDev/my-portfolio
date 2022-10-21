@@ -15,11 +15,14 @@ import { ButtonShape } from '../Button';
 
 const settings = {
   dots: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
+  dotsClass: 'slick-dots',
 };
 
 export const Services = () => (
@@ -35,7 +38,7 @@ export const Services = () => (
             <li><h3>{service.itens[0]}</h3></li>
             <li>{service.itens[1]}</li>
           </Styled.BackgroundServices>
-          <ButtonShape background={false}>See More...</ButtonShape>
+          <ButtonShape background={false}></ButtonShape>
         </div>
       ))}
     </Slider>
