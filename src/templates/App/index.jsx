@@ -41,7 +41,7 @@ function Home() {
       <Menu menuClose={menuClose} />
       <Settings settingsClose={settingsClose} onChangeTheme={onChangeTheme} />
       <Sections background id="section1" int>
-        <HomeSection />
+        <HomeSection theme={theme} />
       </Sections>
       <Sections background={false} id="section2" int>
         <Introducing background />
