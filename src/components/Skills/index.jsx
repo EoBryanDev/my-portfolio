@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable array-callback-return */
 /* eslint-disable semi */
 /* eslint-disable react/jsx-props-no-spreading */
+
 import React from 'react';
 
 import Slider from 'react-slick';
@@ -35,11 +37,33 @@ const settingsSmallCarrousel = {
 };
 
 export const Skills = () => (
-  <Styled.SliderCarrousel>
-    <Styled.SliderContainer>
-      <Slider {...settings}>
+  <>
+    <Styled.SliderCarrousel>
+      <Styled.SliderContainer>
+        <Slider {...settings}>
+          {carrouselItens.map((item) => (
+            <div key={item.id}>
+              <Styled.Circle>
+                <img src={item.icon} alt={item.alt} />
+              </Styled.Circle>
+              <h2>{item.title}</h2>
+              <p>{item.paragraph}</p>
+              <h3>Techs that I enjoy to work:</h3>
+              <Styled.TechSlider>
+                <Slider {...settingsSmallCarrousel}>
+                  {images.map((img) => (img.techNum === item.id
+                    ? <div key={img.id}><img src={img.url} alt={img.alt} /></div>
+                    : ''))}
+                </Slider>
+              </Styled.TechSlider>
+            </div>
+          ))}
+        </Slider>
+      </Styled.SliderContainer>
+
+      <Styled.CardLargeDevices>
         {carrouselItens.map((item) => (
-          <div key={item.id}>
+          <Styled.ContainerCard key={item.id}>
             <Styled.Circle>
               <img src={item.icon} alt={item.alt} />
             </Styled.Circle>
@@ -47,15 +71,14 @@ export const Skills = () => (
             <p>{item.paragraph}</p>
             <h3>Techs that I enjoy to work:</h3>
             <Styled.TechSlider>
-              <Slider {...settingsSmallCarrousel}>
-                {images.map((img) => (img.techNum === item.id
-                  ? <div key={img.id}><img src={img.url} alt={img.alt} /></div>
-                  : ''))}
-              </Slider>
+              {images.map((img) => (img.techNum === item.id
+                ? <div key={img.id}><img src={img.url} alt={img.alt} /></div>
+                : ''))}
             </Styled.TechSlider>
-          </div>
+          </Styled.ContainerCard>
         ))}
-      </Slider>
-    </Styled.SliderContainer>
-  </Styled.SliderCarrousel>
+      </Styled.CardLargeDevices>
+    </Styled.SliderCarrousel>
+
+  </>
 );

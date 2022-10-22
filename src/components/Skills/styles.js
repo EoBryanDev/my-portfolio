@@ -8,6 +8,7 @@ export const SliderCarrousel = styled.section`
     text-align: center;
     padding: 10px;
 
+
     h3, h2{
       color: ${theme.colors.secondaryColor};
       letter-spacing: ${theme.letterSpacings.thin};
@@ -16,6 +17,21 @@ export const SliderCarrousel = styled.section`
     p{
       margin: 10px 0;
       text-align: justify;
+    }
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+      background: none;
+      p{
+        padding: 5px;
+        height: 160px;
+      }
+      h2{
+        display: flex;
+        align-items: center;
+        height: 70px;
+      }
+      h3{
+        margin: 10px;
+      }
     }
   `}
 
@@ -44,11 +60,11 @@ ${({ theme }) => css`
 
 `;
 export const TechSlider = styled.div`
-${() => css`
+${({ theme }) => css`
   border-radius: 10px;
   background-color: white;
 
-  height: 70px;
+  //  height: 100%;
   padding: 5px 10px;
 
   margin-top: 30px;
@@ -58,10 +74,57 @@ ${() => css`
     margin-top: 10px;
     width: 50%;
   }
+
+  @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 98%;
+    height: 110px;
+
+    img{
+      width: 35px;
+    }
+  }
   `}
 `;
 
 export const SliderContainer = styled.article`
-${() => css`
+${({ theme }) => css`
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+      display: none;
+    }
   `}
+`;
+
+export const CardLargeDevices = styled.article`
+${({ theme }) => css`
+      display:none;
+
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      gap: 20px;
+
+      p{
+        text-align: center;
+      }
+    }
+    `}
+    `;
+
+export const ContainerCard = styled.div`
+   background-color: ${({ theme }) => theme.colors.lightColor};
+   border-radius: 5px;
+   width:100%;
+   min-height: 770px;
+   border: 1px solid;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 `;

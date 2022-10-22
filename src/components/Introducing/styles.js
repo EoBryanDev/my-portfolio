@@ -2,10 +2,16 @@ import styled, { css } from 'styled-components';
 
 export const Story = styled.div`
   ${({ theme }) => css`
+
     background: ${theme.name === 'dark' ? '' : theme.colors.whiteColor};
     width: 100%;
     text-align: center;
     img{
+      @media only screen and (min-width: 834px){
+        width:50%;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
       width: 100%;
     }
     h1{
@@ -18,5 +24,10 @@ export const Story = styled.div`
     p{
       color: ${theme.name === 'dark' ? theme.colors.lightColor : theme.colors.blackColor};
     }
+
+    div{
+      margin-top: 30%;
+    }
+
   `
 }`;

@@ -11,7 +11,6 @@ import { Introducing } from '../../components/Introducing';
 import { Menu } from '../../components/Menu';
 import { Navbar } from '../../components/Navbar';
 import { Sections } from '../../components/Sections';
-import { Resume } from '../../components/Resume---';
 import GoToTop from '../../components/GoToTop';
 import { Services } from '../../components/Services---';
 import { Skills } from '../../components/Skills';
@@ -45,7 +44,6 @@ function Home() {
       </Sections>
       <Sections background={false} id="section2" int>
         <Introducing background />
-        <Resume>Check out my resumè</Resume>
       </Sections>
       <Sections background id="section3" int>
         <Skills />

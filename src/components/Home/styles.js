@@ -37,21 +37,60 @@ ${({ theme }) => css`
   `}
 `;
 
-export const ButtonContainer = styled.div`
+export const MeContainer = styled.div`
+@media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 0;
+  align-items: center;
+}
+`;
+export const TextContainer = styled.div`
+@media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+
+
+}
+`;
+export const ImgContainer = styled.div`
+@media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .profile{
+    width:90%;
+  }
+}
+`;
+
+export const ButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 
 `;
 
 export const CheckOutMe = styled.div`
 ${({ theme }) => css`
 
+  @media only screen and (min-width: ${theme.deviceSizes.tablet}) {
+    display: flex;
+    justify-content: space-around;
+
+  }
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: ${theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.lightColor}
 
-  `}
+`}
+
 `;
 
 export const Bloob = styled.div`
@@ -69,8 +108,8 @@ export const Bloob = styled.div`
 
     @media only screen and (min-width: ${theme.deviceSizes.tablet}){
       width: 340px;
-      top: 420px;
-      right: 150px;
+      top: 220px;
+      right: 60px;
       height: 400px;
     }
   `}

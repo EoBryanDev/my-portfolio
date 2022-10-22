@@ -3,6 +3,7 @@ import * as Styled from './styles';
 
 import Ilustration from '../../assets/programming_image.svg';
 import { Intro } from './mock';
+import { Resume } from '../Resume---';
 
 export const Introducing = () => (
   <Styled.Story>
@@ -19,5 +20,8 @@ export const Introducing = () => (
         {Intro.tp}
       </p>
     </article>
+    <div>
+      <Resume>Check out my resumè</Resume>
+    </div>
   </Styled.Story>
 );
