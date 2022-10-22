@@ -1,12 +1,16 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.section`
-  ${() => css`
+  ${({ theme }) => css`
     border-radius: 10px;
     text-align: center;
     padding: 20px;
-  `}
 
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+      display:none;
+    }
+
+  `}
   p{
     margin: 10px 0;
     text-align: justify;
@@ -82,4 +86,51 @@ export const ProjectNav = styled.div`
   img{
     width: 10%;
   }
+`;
+export const GridWrapper = styled.div`
+display: none;
+
+  ${({ theme }) => css`
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}){ //grid wrapper
+      display: block;
+
+      .grid-wrapper{
+        padding: 10px;
+        max-width: 1100px;
+        margin: 0 auto;
+        background: #f2f2f2;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+        grid-auto-flow: dense;
+      }
+
+      .tall{
+        grid-row: span 2;
+        background: gray;
+        padding: 10px;
+        border: 1px solid;
+      }
+
+      .wide{
+        grid-column: span 2;
+        background: yellow;
+        padding: 10px;
+        border: 1px solid;
+      }
+      .ultraWide {
+        grid-column: span 3;
+      }
+
+       img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+    }
+
+  `}
+
 `;

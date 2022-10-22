@@ -122,7 +122,6 @@ export const ContainerCard = styled.div`
    border-radius: 5px;
    width:100%;
    min-height: 770px;
-   border: 1px solid;
    display: flex;
    flex-direction: column;
    justify-content: center;

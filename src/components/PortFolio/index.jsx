@@ -1,3 +1,5 @@
+/* eslint-disable arrow-parens */
+/* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
@@ -22,27 +24,55 @@ const settings = {
 };
 
 export const PortFolio = () => (
-  <Styled.Container>
-    <h2>What I&apos;ve been working on</h2>
-    <Styled.SliderContainer>
-      <Slider {...settings}>
+  <>
+    <Styled.Container>
+      <h2>What I&apos;ve been working on</h2>
+      <Styled.SliderContainer>
+        <Slider {...settings}>
+          {portFolio.map((item) => (
+            <div key={item.id}>
+              <Styled.Cover>
+                <img src={Test} alt="Cover" />
+                <div className="title_overlay title_overlay--blur">
+                  <h3>{item.title}</h3>
+                </div>
+              </Styled.Cover>
+              <Styled.ProjectNav>
+                <ButtonShape type="submit">Visit</ButtonShape>
+                {item.techs.map((itens) => (
+                  <img src={itens.url} alt={itens.alt} key={itens.id} />
+                ))}
+              </Styled.ProjectNav>
+            </div>
+          ))}
+        </Slider>
+      </Styled.SliderContainer>
+    </Styled.Container>
+    <Styled.GridWrapper>
+      <h2>What I&apos;ve been working on</h2>
+      <div className="grid-wrapper">
         {portFolio.map((item) => (
-          <div key={item.id}>
-            <Styled.Cover>
-              <img src={Test} alt="Cover" />
-              <div className="title_overlay title_overlay--blur">
-                <h3>{item.title}</h3>
-              </div>
-            </Styled.Cover>
-            <Styled.ProjectNav>
-              <ButtonShape type="submit">Visit</ButtonShape>
-              {item.techs.map((itens) => (
-                <img src={itens.url} alt={itens.alt} key={itens.id} />
-              ))}
-            </Styled.ProjectNav>
-          </div>
+          <>
+            <div className={item.gridType} key={item.id}>
+              <img src={Test} alt="src" />
+            </div>
+          </>
         ))}
-      </Slider>
-    </Styled.SliderContainer>
-  </Styled.Container>
+        {/* portFolio.map((item) => (
+          <div key={item.id}>
+            {item.id % 2 === 0 ? (
+              <div className="wide">
+                <img src={Test} alt={item.id} />
+              </div>
+            ) : (
+              <div className="tall">
+                <img src={Test} alt={item.id} />
+              </div>
+            )}
+          </div>
+        )) */}
+      </div>
+    </Styled.GridWrapper>
+
+  </>
 );
