@@ -8,7 +8,7 @@ export const NavgationBar = styled.nav`
     z-index: 1;
     width:100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: nowrap;
     align-items: center;
     background: ${theme.name === 'dark' ? theme.colors.primaryColor : theme.colors.whiteColor};
@@ -24,7 +24,7 @@ export const NavgationBar = styled.nav`
         width:10%;
 
       }
-      @media only screen and (max-width: ${theme.deviceSizes.mobile}){
+      @media only screen and (max-width: ${theme.deviceSizes.tablet}){
         width:30%;
 
       }
