@@ -5,14 +5,14 @@ export const Container = styled.section`
   ${({ theme }) => css`
   margin: 30% 0;
   border-radius: 10px;
-  background: ${theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.thirdColor};
+  background: ${theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.whiteColor};
   text-align: center;
 
   h2{
     color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.darkColor};
   }
   p{
-    color: ${theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.textColor};
+    color: ${theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.secondaryColor};
   }
 `}
 `;
@@ -35,5 +35,6 @@ export const TalkButton = styled(ButtonShape)`
   border-radius: 5px;
   background: ${({ theme }) => (theme.name === 'dark' ? theme.colors.blackColor : theme.colors.secondaryColor)};
   color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.blackColor)};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.darkColor};
 
 `;

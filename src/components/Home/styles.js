@@ -6,7 +6,7 @@ ${({ theme }) => css`
   h4{
     margin: ${theme.spacings.margins.xlarge} 0 0 0;
     font-weight: ${theme.fontWeights.thin};
-    color: ${(theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.whiteColor)}
+    color: ${(theme.name === 'dark' ? theme.colors.lightColor : theme.colors.darkColor)}
   }
 
   .profile{
@@ -25,9 +25,7 @@ ${({ theme }) => css`
 
   }
 
-  @media only screen and (min-width: ${theme.deviceSizes.desktop}){
 
-  }
   .react-icons {
     color: #FFFFFF;
   }
@@ -83,11 +81,13 @@ ${({ theme }) => css`
     justify-content: space-around;
 
   }
-
+  p{
+    color: ${theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.darkColor};
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.lightColor}
+  color: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.thirdColor}
 
 `}
 
@@ -103,14 +103,26 @@ export const Bloob = styled.div`
     height: 300px;
     background-image: linear-gradient(45deg, ${theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.secondaryColor} 0%, ${theme.name === 'dark' ? theme.colors.backgroundColor : theme.colors.thirdColor} 100%);
     border-radius: 83% 17% 95% 5% / 36% 58% 42% 64% ;
-    box-shadow:  ${theme.name === 'dark' ? theme.colors.whiteColor
-    : theme.colors.secondaryColor} 1px 5px 20px 20px;
+    /*box-shadow:  ${theme.name === 'dark' ? theme.colors.whiteColor
+    : theme.colors.secondaryColor} 1px 5px 20px 20px;*/
+    animation: growing 1.2s infinite alternate;
+
 
     @media only screen and (min-width: ${theme.deviceSizes.tablet}){
       width: 340px;
       top: 220px;
       right: 60px;
       height: 400px;
+    }
+    @keyframes growing{
+      0%{
+        box-shadow:  ${theme.name === 'dark' ? theme.colors.whiteColor
+    : theme.colors.secondaryColor} 1px 5px 20px 10px;
+      }
+      100%{
+        box-shadow:  ${theme.name === 'dark' ? theme.colors.whiteColor
+    : theme.colors.secondaryColor} 1px 5px 40px 30px;
+      }
     }
   `}
 `;

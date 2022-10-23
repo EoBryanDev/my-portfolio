@@ -38,7 +38,7 @@ export const Services = () => (
             <li><h3>{service.itens[0]}</h3></li>
             <li>{service.itens[1]}</li>
           </Styled.BackgroundServices>
-          <ButtonShape background={false}></ButtonShape>
+          <ButtonShape background={false}>See more...</ButtonShape>
         </div>
       ))}
     </Slider>

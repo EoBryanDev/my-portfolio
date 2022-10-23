@@ -16,8 +16,8 @@ export const Container = styled.section`
     text-align: justify;
   }
   h3, h2{
-    color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.lightColor)};
-    text-shadow: ${({ theme }) => theme.colors.darkColor} 2px 3px 2px;
+    color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.thirdColor)};
+    text-shadow: ${({ theme }) => theme.colors.lightColor} 2px 3px 2px;
     letter-spacing: ${({ theme }) => theme.letterSpacings.thin};
     margin: 20px 0;
   }
@@ -91,44 +91,112 @@ export const GridWrapper = styled.div`
 display: none;
 
   ${({ theme }) => css`
-    @media only screen and (min-width: ${theme.deviceSizes.tablet}){ //grid wrapper
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}){
       display: block;
+      text-align: center;
 
       .grid-wrapper{
         padding: 10px;
         max-width: 1100px;
-        margin: 0 auto;
-        background: #f2f2f2;
+        margin: 30px auto;
+        background: rgba(223, 223, 223, 1);
         display: grid;
         grid-gap: 5px;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-auto-rows: 200px;
         grid-auto-flow: dense;
+        border-radius: 20px;
+
+        @media only screen and (min-width: ${theme.deviceSizes.desktop}){
+          max-width: 1500px;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-auto-rows: 250px;
+        }
       }
 
       .tall{
         grid-row: span 2;
-        background: gray;
         padding: 10px;
-        border: 1px solid;
+        @media only screen and (min-width: ${theme.deviceSizes.desktop}){
+          grid-row: span 3;
+        }
+
       }
 
       .wide{
         grid-column: span 2;
-        background: yellow;
         padding: 10px;
-        border: 1px solid;
+        @media only screen and (min-width: ${theme.deviceSizes.desktop}){
+          grid-column: span 2;
+        }
+
+      }
+      .wide:hover img{
+        backdrop-filter: blur(400px);
+      }
       }
       .ultraWide {
         grid-column: span 3;
+        @media only screen and (min-width: ${theme.deviceSizes.desktop}){
+          grid-column: span 4;
+        }
       }
 
-       img{
+      img{
         width: 100%;
         height: 100%;
         border-radius: 20px;
         object-fit: cover;
       }
+
+      .tall:hover > .overlay {
+        background-color: white;
+        background: rgba(255,255,255,0.8);
+        opacity: 1;
+      }
+      .ultraWide:hover > .overlay {
+        background-color: white;
+        background: rgba(255,255,255,0.8);
+        opacity: 1;
+      }
+      .wide:hover > .overlay {
+        background: rgba(255,255,255,0.8);
+        opacity: 1;
+      }
+      .wide:hover .buttons , .ultraWide:hover .buttons, .tall:hover .buttons {
+        transition: opacity 2000ms ease-in;
+        opacity: 1;
+      }
+
+      .overlay{
+        position: relative;
+        bottom: 102%;
+        color: ${theme.colors.secondaryColor};
+        background: rgba(255,255,255,1);
+        z-index: 0;
+        opacity: 0;
+        width: 100%;
+        height: 101%;
+        transition: opacity 0.5s ease-in-out;
+        border-radius: 20px;
+      }
+      .content{
+        padding: 10% 0 0 0;
+      }
+
+      .buttons{
+        display: flex;
+        justify-content: center;
+        gap:10px;
+        opacity: 0;
+        margin: 30px 0;
+
+      }
+      .buttons a{
+        color: ${theme.colors.secondaryColor};
+      }
+
+
     }
 
   `}

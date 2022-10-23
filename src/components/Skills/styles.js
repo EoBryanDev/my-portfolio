@@ -3,20 +3,21 @@ import styled, { css } from 'styled-components';
 export const SliderCarrousel = styled.section`
   ${({ theme }) => css`
     height: 80%;
-    background-color: ${theme.name === 'dark' ? theme.colors.blackColor : theme.colors.lightColor};
+    background-color: ${theme.name === 'dark' ? theme.colors.blackColor : theme.colors.thirdColor};
     border-radius: 10px;
     text-align: center;
     padding: 10px;
 
 
     h3, h2{
-      color: ${theme.colors.secondaryColor};
+      color: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.whiteColor};
       letter-spacing: ${theme.letterSpacings.thin};
       margin: 50px 0;
     }
     p{
       margin: 10px 0;
       text-align: justify;
+      color: ${theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.darkColor};
     }
     @media only screen and (min-width: ${theme.deviceSizes.tablet}){
       background: none;
@@ -27,7 +28,8 @@ export const SliderCarrousel = styled.section`
       h2{
         display: flex;
         align-items: center;
-        height: 70px;
+        height: 50px;
+
       }
       h3{
         margin: 10px;
@@ -118,7 +120,7 @@ ${({ theme }) => css`
     `;
 
 export const ContainerCard = styled.div`
-   background-color: ${({ theme }) => theme.colors.lightColor};
+   background-color: ${({ theme }) => theme.colors.thirdColor};
    border-radius: 5px;
    width:100%;
    min-height: 770px;

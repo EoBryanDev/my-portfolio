@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable arrow-parens */
 /* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import { BsGithub, BsBoxArrowUpRight } from 'react-icons/bs';
 
 import Slider from 'react-slick';
 import Test from '../../assets/Test.png';
@@ -13,6 +15,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { portFolio } from './mock';
 import { ButtonShape } from '../Button';
+import { Heading } from '../Heading';
 
 const settings = {
   dots: true,
@@ -49,12 +52,22 @@ export const PortFolio = () => (
       </Styled.SliderContainer>
     </Styled.Container>
     <Styled.GridWrapper>
-      <h2>What I&apos;ve been working on</h2>
+      <Heading>What I&apos;ve been working on</Heading>
       <div className="grid-wrapper">
         {portFolio.map((item) => (
           <>
             <div className={item.gridType} key={item.id}>
-              <img src={Test} alt="src" />
+              <img src={item.urlBack} alt={item.alt} />
+              <div className="overlay">
+                <div className="content">
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                  <div className="buttons">
+                    <a href="w"><BsGithub /></a>
+                    <a href="w"><BsBoxArrowUpRight /></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </>
         ))}
