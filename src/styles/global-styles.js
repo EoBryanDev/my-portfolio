@@ -29,11 +29,49 @@ export const GlobalStyles = createGlobalStyle`
 
   h1{
     font-size: ${({ theme }) => theme.sizes.mobile.header};
+
+    @media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
+      font-size: ${({ theme }) => theme.sizes.tablet.header};
+    }
+    @media only screen and (min-width: ${({ theme }) => theme.deviceSizes.desktop}){
+      font-size: ${({ theme }) => theme.sizes.desktop.header};
+    }
+  }
+  h2{
+    font-size: ${({ theme }) => theme.sizes.mobile.subtitle};
+
+    @media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
+      font-size: ${({ theme }) => theme.sizes.tablet.smHeader};
+    }
+    @media only screen and (min-width: ${({ theme }) => theme.deviceSizes.desktop}){
+      font-size: ${({ theme }) => theme.sizes.desktop.mdHeader};
+    }
+  }
+  h4{
+    font-size: ${({ theme }) => theme.sizes.mobile.text};
+
+    @media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
+      font-size: ${({ theme }) => theme.sizes.tablet.smSubtitle};
+    }
+    @media only screen and (min-width: ${({ theme }) => theme.deviceSizes.desktop}){
+      font-size: ${({ theme }) => theme.sizes.desktop.smHeader};
+    }
   }
 
   ${({ theme }) => css`
     p{
       color: ${theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.blackColor}
+
     }
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}){
+      p{
+        font-size: ${theme.sizes.tablet.text};
+      }
+  }
+    @media only screen and (min-width: ${theme.deviceSizes.desktop}){
+      p{
+        font-size: ${theme.sizes.desktop.text};
+      }
+  }
   `}
 `;

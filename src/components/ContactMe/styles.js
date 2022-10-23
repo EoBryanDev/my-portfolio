@@ -3,7 +3,7 @@ import { ButtonShape } from '../Button/styles';
 
 export const Container = styled.section`
   ${({ theme }) => css`
-  margin: 30% 0;
+  margin: 10% 0;
   border-radius: 10px;
   background: ${theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.whiteColor};
   text-align: center;

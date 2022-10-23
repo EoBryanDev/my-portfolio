@@ -25,12 +25,8 @@ ${({ theme }) => css`
 
   }
 
-
-  .react-icons {
-    color: #FFFFFF;
-  }
   .react-icons:hover {
-    color: ${(theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.thirdColor)};
+    color: ${(theme.name === 'dark' ? theme.colors.secondaryAltColor : theme.colors.darkColor)};
   }
   `}
 `;
@@ -64,6 +60,11 @@ export const ImgContainer = styled.div`
     width:90%;
   }
 }
+@media only screen and (min-width: ${({ theme }) => theme.deviceSizes.desktop}){
+  .profile{
+    width:100%;
+  }
+}
 `;
 
 export const ButtonContainer = styled.div`
@@ -76,6 +77,10 @@ export const ButtonContainer = styled.div`
 export const CheckOutMe = styled.div`
 ${({ theme }) => css`
 
+  @media only screen and (min-width: ${theme.deviceSizes.desktop}) {
+    margin-top: 5%;
+
+  }
   @media only screen and (min-width: ${theme.deviceSizes.tablet}) {
     display: flex;
     justify-content: space-around;
@@ -85,7 +90,7 @@ ${({ theme }) => css`
     color: ${theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.darkColor};
   }
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.thirdColor}
 
@@ -97,7 +102,7 @@ export const Bloob = styled.div`
   ${({ theme }) => css`
     position: absolute;
     z-index: -1;
-    top: 520px;
+    top: 63%;
     right: 40px;
     width: 240px;
     height: 300px;
@@ -106,14 +111,22 @@ export const Bloob = styled.div`
     /*box-shadow:  ${theme.name === 'dark' ? theme.colors.whiteColor
     : theme.colors.secondaryColor} 1px 5px 20px 20px;*/
     animation: growing 1.2s infinite alternate;
+    transition: all 2s ease-in-out;
 
 
     @media only screen and (min-width: ${theme.deviceSizes.tablet}){
       width: 340px;
-      top: 220px;
-      right: 60px;
+      top: 20%;
+      right: 10%;
       height: 400px;
     }
+    @media only screen and (min-width: ${theme.deviceSizes.desktop}) {
+      width: 440px;
+      height: 540px;
+      top: 20%;
+      right: 10%;
+    }
+
     @keyframes growing{
       0%{
         box-shadow:  ${theme.name === 'dark' ? theme.colors.whiteColor

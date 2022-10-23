@@ -14,6 +14,7 @@ export const MenuComponent = styled.ul`
   background: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.lightColor};
   color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.blackColor};
   transition: all 0.3s ease-in-out;
+  width:100%;
   `}
 
 

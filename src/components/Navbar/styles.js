@@ -10,7 +10,7 @@ export const NavgationBar = styled.nav`
     justify-content: space-around;
     align-items: center;
     background: ${theme.name === 'dark' ? theme.colors.primaryColor : theme.colors.whiteColor};
-    height: 60px;
+    height: 100%;
     color: ${theme.name === 'dark' ? theme.colors.lightColor : theme.colors.secondaryColor};
     padding: 0 ${theme.spacings.paddings.small};
     border-bottom: 1px solid ${theme.colors.lightColor};

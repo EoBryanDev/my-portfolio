@@ -24,6 +24,7 @@ export const SliderCarrousel = styled.section`
       p{
         padding: 5px;
         height: 160px;
+        margin-bottom: 40px;
       }
       h2{
         display: flex;
@@ -120,7 +121,7 @@ ${({ theme }) => css`
     `;
 
 export const ContainerCard = styled.div`
-   background-color: ${({ theme }) => theme.colors.thirdColor};
+   background-color: ${({ theme }) => (theme.name === 'dark' ? '' : theme.colors.thirdColor)};
    border-radius: 5px;
    width:100%;
    min-height: 770px;

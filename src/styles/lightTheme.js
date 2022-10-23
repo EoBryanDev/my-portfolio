@@ -36,7 +36,7 @@ const lightTheme = {
     },
     tablet: {
       smText: '12px',
-      text: '16px',
+      text: '18px',
       smSubtitle: '22px',
       subtitle: '26px',
       smHeader: '32px',
@@ -44,7 +44,7 @@ const lightTheme = {
     },
     desktop: {
       smText: '12px',
-      text: '16px',
+      text: '22px',
       subtitle: '26px',
       smHeader: '36px',
       mdHeader: '46px',

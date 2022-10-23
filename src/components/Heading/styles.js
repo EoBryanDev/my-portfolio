@@ -9,5 +9,14 @@ export const Title = styled.h1`
     letter-spacing: ${theme.letterSpacings.medium};
     margin-bottom: ${theme.spacings.margins.small};
 
+    @media only screen and (min-width: ${theme.deviceSizes.tablet}) {
+      font-size: ${theme.sizes.tablet.header};
+
+    }
+    @media only screen and (min-width: ${theme.deviceSizes.desktop}) {
+      font-size: ${theme.sizes.desktop.header};
+
+    }
+
   `}
 `;

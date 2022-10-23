@@ -189,12 +189,12 @@ display: none;
         justify-content: center;
         gap:10px;
         opacity: 0;
-        margin: 30px 0;
 
       }
       .buttons a{
-        color: ${theme.colors.secondaryColor};
+        color: ${theme.colors.thirdColor};
       }
+
 
 
     }

@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable arrow-parens */
 /* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import { IconContext } from 'react-icons';
 import { BsGithub, BsBoxArrowUpRight } from 'react-icons/bs';
 
 import Slider from 'react-slick';
@@ -63,8 +65,10 @@ export const PortFolio = () => (
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
                   <div className="buttons">
-                    <a href="w"><BsGithub /></a>
-                    <a href="w"><BsBoxArrowUpRight /></a>
+                    <IconContext.Provider value={{ size: '35%', className: 'react-icons' }}>
+                      <a href="w"><BsGithub /></a>
+                      <a href="w"><BsBoxArrowUpRight /></a>
+                    </IconContext.Provider>
                   </div>
                 </div>
               </div>

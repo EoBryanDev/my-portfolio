@@ -2,13 +2,21 @@ import styled, { css } from 'styled-components';
 
 export const Story = styled.div`
   ${({ theme }) => css`
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     //  background: ${theme.name === 'dark' ? '' : theme.colors.whiteColor};
     width: 100%;
     text-align: center;
     img{
-      @media only screen and (min-width: 834px){
+      @media only screen and (min-width: ${theme.deviceSizes.tablet}){
         width:50%;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      @media only screen and (min-width: ${theme.deviceSizes.desktop}){
+        width:30%;
         border-radius: 50%;
         margin: 0 auto;
       }
@@ -25,10 +33,12 @@ export const Story = styled.div`
       color: ${theme.name === 'dark' ? theme.colors.lightColor : theme.colors.lightColor};
       line-height: 1.5rem;
     }
+    article{
+      @media only screen and (min-width: ${theme.deviceSizes.mobile}){
 
-    div{
-      margin-top: 30%;
+        width: 50%;
+      }
+      width: 100%;
     }
-
   `
 }`;

@@ -11,6 +11,7 @@ export const Resume = styled.div`
     height: 40px;
     font-size: 20px;
     width: 100%;
+    margin-top:10%;
 
     &:hover, &:active{
       background-color: ${theme.name === 'dark' ? theme.colors.blackColor : theme.colors.whiteColor};
