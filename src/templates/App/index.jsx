@@ -36,6 +36,7 @@ function Home() {
         setMenuClose={setMenuClose}
         settingsClose={settingsClose}
         setSettingsClose={setSettingsClose}
+        theme={theme.name}
       />
       <Menu menuClose={menuClose} />
       <Settings settingsClose={settingsClose} onChangeTheme={onChangeTheme} />
