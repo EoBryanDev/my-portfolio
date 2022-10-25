@@ -7,6 +7,10 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  *::selection{
+    color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.blackColor : theme.colors.whiteColor)};
+    background: ${({ theme }) => (theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.darkColor)};
+  }
 
   html{
     scroll-behavior: smooth;

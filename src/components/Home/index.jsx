@@ -23,13 +23,24 @@ export const HomeSection = ({ theme }) => (
         <Heading colorDark>AND I&apos;M</Heading>
         <div className="wrapper">
           <div className="words">
-            <span><h1>TECH LOVER.</h1></span>
-            <span><h1>TECH LOVER.</h1></span>
-            <span><h1>OPTIMIST.</h1></span>
-            <span><h1>WHOOPER.</h1></span>
-            <span><h1>PLUVIOPHILE.</h1></span>
+            <span>
+              <h1>TECH LOVER. 👨‍💻❤️</h1>
+            </span>
+            <span>
+              <h1>TECH LOVER. 👨‍💻❤️</h1>
+            </span>
+            <span>
+              <h1>OPTIMIST. 🙌🌟</h1>
+            </span>
+            <span>
+              <h1>WHOOPER. ⛹🏽‍♂️🏀</h1>
+            </span>
+            <span>
+              <h1>PLUVIOPHILE. ☔️❤️</h1>
+            </span>
           </div>
         </div>
+        {/* eslint-disable-next-line react/style-prop-object */}
         <h4>
           That&apos;s great when you really like to help each
           other and also you know how to do this with tech
