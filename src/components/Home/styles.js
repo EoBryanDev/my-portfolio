@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
@@ -42,13 +43,60 @@ export const MeContainer = styled.div`
 }
 `;
 export const TextContainer = styled.div`
-@media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
+${({ theme }) => css`
+@media only screen and (min-width: ${theme.deviceSizes.tablet}){
   width: 40%;
   display: flex;
   flex-direction: column;
-
-
 }
+.wrapper{
+  box-sizing: content-box;
+  height: 150px;
+  width:900px;
+  display:flex;
+}
+.words{
+  overflow:hidden;
+}
+span{
+  position: block;
+  display:block;
+  height: 100%;
+  font-family: 'Inter';
+  color: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.thirdColor};
+  text-shadow: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.lightColor} 2px 3px 2px;
+  letter-spacing: ${theme.letterSpacings.medium};
+  animation: spin_words 7s infinite;
+  animation-delay: 1s;
+  margin-bottom: 10px;
+}
+@keyframes spin_words{
+  10%{
+    transform: translateY(-112%);
+  }
+  25%{
+    transform: translateY(-100%);
+  }
+  35%{
+    transform: translateY(-212%);
+  }
+  50%{
+    transform: translateY(-200%);
+  }
+  60%{
+    transform: translateY(-312%);
+  }
+  75%{
+    transform: translateY(-300%);
+  }
+  85%{
+    transform: translateY(-412%);
+  }
+  100%{
+    transform: translateY(-400%);
+  }
+}
+`}
 `;
 export const ImgContainer = styled.div`
 @media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
@@ -68,10 +116,29 @@ export const ImgContainer = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
+  ${({ theme }) => css`
   width: 100%;
   display: flex;
   justify-content: flex-start;
-
+  flex-wrap: wrap;
+  .portfolio{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid;
+    min-width: ${theme.buttons.width.regular};
+    height: ${theme.buttons.heigth.regular};
+    border-radius: ${theme.buttons.border.radius};
+    margin: ${theme.spacings.margins.large} 10px;
+    color: ${theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.blackColor}
+  }
+  .ant-affix{
+    display: none;
+  }
+  a{
+    font-size:16px;
+  }
+  `}
 `;
 
 export const CheckOutMe = styled.div`

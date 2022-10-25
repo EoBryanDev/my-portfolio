@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { ButtonShape } from '../Button/styles';
 
 export const Container = styled.section`
   ${({ theme }) => css`
@@ -26,15 +25,10 @@ export const Ballon = styled.div`
 
 
   `;
-export const TalkButton = styled(ButtonShape)`
+export const TalkButton = styled.div`
 
   position: relative;
   bottom: -35px;
-  width: 140px;
-  height: 35px;
-  border-radius: 5px;
-  background: ${({ theme }) => (theme.name === 'dark' ? theme.colors.blackColor : theme.colors.secondaryColor)};
-  color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.whiteColor : theme.colors.blackColor)};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.darkColor};
+  text-decoration: none;
 
 `;

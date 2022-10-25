@@ -22,7 +22,13 @@ export const GlobalStyles = createGlobalStyle`
       22.4%, ${(props) => props.theme.colors.thirdColor} 100%);*/
     background : ${({ theme }) => theme.name === 'dark' && (theme.colors.blackColor)};
   }
-
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:visited{
+    color: inherit
+  }
   h1,h2,h3,h4,h5,h6{
     font-family: ${({ theme }) => theme.fonts.primaryFont}, 'sans-serif';
   }

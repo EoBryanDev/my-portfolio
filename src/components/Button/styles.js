@@ -2,6 +2,9 @@ import styled, { css } from 'styled-components';
 
 export const ButtonShape = styled.button`
   ${({ theme, background }) => css`
+  a{
+      color: ${theme.name === 'dark' && background === false ? theme.colors.whiteColor : theme.colors.blackColor}
+    }
     width: ${theme.buttons.width.regular};
     height: ${theme.buttons.heigth.regular};
     border: ${background === false ? '1px solid' : 'none'};
@@ -10,5 +13,7 @@ export const ButtonShape = styled.button`
     background: ${background ? theme.colors.thirdColor : 'none'};
     background: ${theme.name === 'dark' && background && (theme.colors.secondaryAltColor)};
     color: ${theme.name === 'dark' && background === false ? theme.colors.whiteColor : theme.colors.blackColor}
+    font-size: 16px;
+
   `}
 `;

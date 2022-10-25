@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 
 export const NavgationBar = styled.nav`
   ${({ theme }) => css`
-
     position: sticky;
     top:0;
     z-index: 1;
@@ -12,20 +11,22 @@ export const NavgationBar = styled.nav`
     flex-wrap: nowrap;
     align-items: center;
     background: ${theme.name === 'dark' ? theme.colors.primaryColor : theme.colors.whiteColor};
-    height: 100%;
+    height: 60px;
     color: ${theme.name === 'dark' ? theme.colors.lightColor : theme.colors.secondaryColor};
     padding: 0 ${theme.spacings.paddings.small};
     border-bottom: 1px solid ${theme.colors.lightColor};
+    box-shadow:  ${theme.name === 'dark' ? theme.colors.lightColor
+    : theme.colors.darkColor} 1px 1px 10px 1px;
     img{
       padding: 10px;
-      width:5%;
-
-      @media only screen and (min-width: ${theme.deviceSizes.tablet}){
-        width:10%;
+      width:130px;
+      @media only screen and (max-width: ${theme.deviceSizes.mobile}){
+        width:80px;
 
       }
+
       @media only screen and (max-width: ${theme.deviceSizes.tablet}){
-        width:30%;
+        width:120px;
 
       }
     }
@@ -37,13 +38,7 @@ export const NavgationBar = styled.nav`
       padding: 3px;
     }
 
-    /*  Include some way to resize menu in the right way   */
-  @media only screen and (min-width: ${theme.deviceSizes.tablet}){
 
-  }
-  @media only screen and (min-width: ${theme.deviceSizes.desktop}){
-
-  }
   `}
 
 
