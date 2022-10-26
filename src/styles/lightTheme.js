@@ -54,7 +54,7 @@ const lightTheme = {
   deviceSizes: {
     mobile: '360px',
     tablet: '834px',
-    desktop: '1440px',
+    desktop: '1240px',
   },
   spacings: {
     paddings: {

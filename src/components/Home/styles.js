@@ -39,7 +39,7 @@ export const MeContainer = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 0;
-  align-items: center;
+  align-items: flex-start;
 }
 `;
 export const TextContainer = styled.div`
@@ -51,8 +51,8 @@ ${({ theme }) => css`
 }
 .wrapper{
   box-sizing: content-box;
-  height: 150px;
-  width:900px;
+  height: 70px;
+  width:100%;
   display:flex;
 }
 .words{
@@ -66,13 +66,16 @@ span{
   color: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.thirdColor};
   text-shadow: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.lightColor} 2px 3px 2px;
   letter-spacing: ${theme.letterSpacings.medium};
-  animation: spin_words 7s infinite;
-  animation-delay: 1s;
+  animation: spin_words 7s infinite ;
+
   margin-bottom: 10px;
 }
+span h1{
+    font-size:26px;
+  }
 @keyframes spin_words{
   10%{
-    transform: translateY(-112%);
+    transform: translateY(10%);
   }
   25%{
     transform: translateY(-100%);
@@ -169,7 +172,7 @@ export const Bloob = styled.div`
   ${({ theme }) => css`
     position: absolute;
     z-index: -1;
-    top: 63%;
+    top: 110%;
     right: 40px;
     width: 240px;
     height: 300px;
@@ -183,14 +186,14 @@ export const Bloob = styled.div`
 
     @media only screen and (min-width: ${theme.deviceSizes.tablet}){
       width: 340px;
-      top: 20%;
+      top: 30%;
       right: 10%;
       height: 400px;
     }
     @media only screen and (min-width: ${theme.deviceSizes.desktop}) {
       width: 440px;
       height: 540px;
-      top: 20%;
+      top: 35%;
       right: 10%;
     }
 
