@@ -37,6 +37,16 @@ export const NavgationBar = styled.nav`
       display: flex;
       padding: 3px;
     }
+    ul{
+      text-transform:capitalize;
+      list-style: none;
+      display: flex;
+      padding: 3px;
+    }
+    li{
+      margin: 0 5px;
+      padding: 3px;
+    }
 
 
   `}

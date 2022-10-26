@@ -7,8 +7,7 @@ export const ButtonShape = styled.button`
     }
     width: ${theme.buttons.width.regular};
     height: ${theme.buttons.heigth.regular};
-    border: ${background === false ? '1px solid' : 'none'};
-    border: ${background === false && theme.name === 'dark' ? '1px solid white' : 'none'};
+    border: ${background === false && theme.name === 'dark' ? '1px solid white' : '1px solid white'};
     border-radius: ${theme.buttons.border.radius};
     margin: ${theme.spacings.margins.large} 10px;
     background: ${background ? theme.colors.thirdColor : 'none'};

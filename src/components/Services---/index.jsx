@@ -11,7 +11,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { services } from './mock';
-import { ButtonShape } from '../Button';
 
 const settings = {
   dots: true,
@@ -38,7 +37,6 @@ export const Services = () => (
             <li><h3>{service.itens[0]}</h3></li>
             <li>{service.itens[1]}</li>
           </Styled.BackgroundServices>
-          <ButtonShape background={false}>See more...</ButtonShape>
         </div>
       ))}
     </Slider>

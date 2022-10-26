@@ -47,7 +47,7 @@ export const images = [
     techNum: 2,
     id: 8,
     url: 'https://cdn-icons-png.flaticon.com/512/6132/6132221.png',
-    alt: 'mysql',
+    alt: 'c#',
   },
   {
     techNum: 2,

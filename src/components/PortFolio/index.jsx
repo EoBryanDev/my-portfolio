@@ -8,7 +8,6 @@ import { IconContext } from 'react-icons';
 import { BsGithub, BsBoxArrowUpRight } from 'react-icons/bs';
 
 import Slider from 'react-slick';
-import Test from '../../assets/Test.png';
 
 import * as Styled from './styles';
 
@@ -37,15 +36,15 @@ export const PortFolio = () => (
           {portFolio.map((item) => (
             <div key={item.id}>
               <Styled.Cover>
-                <img src={Test} alt="Cover" />
+                <img src={item.urlBack} alt="Cover" />
                 <div className="title_overlay title_overlay--blur">
                   <h3>{item.title}</h3>
                 </div>
               </Styled.Cover>
               <Styled.ProjectNav>
-                <ButtonShape type="submit">Visit</ButtonShape>
+                <ButtonShape type="submit" href={item.urlGit}>Visit</ButtonShape>
                 {item.techs.map((itens) => (
-                  <img src={itens.url} alt={itens.alt} key={itens.id} />
+                  <img src={itens.url} alt={itens.title} key={itens.id} />
                 ))}
               </Styled.ProjectNav>
             </div>
@@ -59,7 +58,7 @@ export const PortFolio = () => (
         {portFolio.map((item) => (
           <>
             <div className={item.gridType} key={item.id}>
-              <img src={item.urlBack} alt={item.alt} />
+              <img src={item.urlBack} alt={item.title} />
               <div className="overlay">
                 <div className="content">
                   <h3>{item.title}</h3>

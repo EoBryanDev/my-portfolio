@@ -39,7 +39,6 @@ export const Cover = styled.div`
     position: block;
     border-radius: 5px;
     width: 90%;
-    filter: grayscale(1);
   }
   .title_overlay{
     position: absolute;

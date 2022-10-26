@@ -66,12 +66,14 @@ span{
   color: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.thirdColor};
   text-shadow: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.lightColor} 2px 3px 2px;
   letter-spacing: ${theme.letterSpacings.medium};
-  animation: spin_words 7s infinite ;
+  animation: spin_words 10s infinite ;
+  -webkit-animation-delay: 2s;
 
   margin-bottom: 10px;
 }
 span h1{
     font-size:26px;
+
   }
 @keyframes spin_words{
   10%{
@@ -93,10 +95,10 @@ span h1{
     transform: translateY(-300%);
   }
   85%{
-    transform: translateY(-412%);
+    transform: translateY(-440%);
   }
   100%{
-    transform: translateY(-400%);
+    transform: translateY(0%);
   }
 }
 `}

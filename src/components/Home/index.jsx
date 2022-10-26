@@ -27,7 +27,7 @@ export const HomeSection = ({ theme }) => (
               <h1>TECH LOVER. 👨‍💻❤️</h1>
             </span>
             <span>
-              <h1>LIFE LONG LEANER. 👨‍💻❤️</h1>
+              <h1>LIFE LONG LEANER. 📚🧠</h1>
             </span>
             <span>
               <h1>OPTIMIST. 🙌🌟</h1>

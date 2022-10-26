@@ -2,6 +2,28 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+
+  ${({ theme }) => css`
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: ${theme.colors.lightColor};
+    border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.thirdColor};
+    border-radius: 10px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${theme.name === 'dark' ? '#1363FF' : '#196e21'};
+  }
+  `}
   * {
     margin: 0;
     padding: 0;

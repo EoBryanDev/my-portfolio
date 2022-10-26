@@ -22,6 +22,16 @@ export const Navbar = ({
       <p>It&apos;s the Bryan</p>
       <div>
         <div>
+          <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>skills</li>
+            <li>services</li>
+            <li>portfolio</li>
+            <li>contact</li>
+          </ul>
+        </div>
+        <div>
           {menuClose
             ? <MdReorder onClick={() => setMenuClose(!menuClose)} />
             : <MdClear onClick={() => setMenuClose(!menuClose)} />}
