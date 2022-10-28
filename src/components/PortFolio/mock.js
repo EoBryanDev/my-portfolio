@@ -5,7 +5,7 @@ export const portFolio = [
     id: 1,
     title: 'My Portfolio 1.0',
     urlBack: 'https://res.cloudinary.com/dhz1saoac/image/upload/v1666959073/my-portfolio_ku5ds9.png',
-    desc: 'Brief description about the project made',
+    desc: 'Its my first version of my professional portfolio and it was made to post my projects and to you follow my jorney as developer. Basecaly, It was made with React.',
     urlGit: 'https://github.com/EoBryanDev/my-portfolio',
     urlSite: 'unvailable',
     gridType: 'ultraWide',
