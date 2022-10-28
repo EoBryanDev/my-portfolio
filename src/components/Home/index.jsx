@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { Anchor } from 'antd';
 import React from 'react';
 import P from 'prop-types';
 
@@ -12,10 +11,9 @@ import { Heading } from '../Heading';
 import profilePicLight from '../../assets/me_lightMode.png';
 import profilePicDark from '../../assets/me_darkMode.png';
 /*  //live.staticflickr.com/65535/52441955023_4783f05112_z.jpg  */
-const pageSize = window.innerWidth;
-const { Link } = Anchor;
+//  const pageSize = window.innerWidth;
 
-export const HomeSection = ({ theme }) => (
+export const HomeSection = ({ theme, pageSize }) => (
   <Styled.Container>
     <Styled.MeContainer>
       <Styled.TextContainer>
@@ -50,9 +48,7 @@ export const HomeSection = ({ theme }) => (
           ? (
             <Styled.ButtonContainer>
               <ButtonShape background href="https://tinyurl.com/EoBryanDev">Let&apos;s Talk...</ButtonShape>
-              <Anchor targetOffset="50">
-                <Link href="#section5" title="Portfolio" className="portfolio" />
-              </Anchor>
+              <a href="#section5" className="portfolio">Portfolio</a>
             </Styled.ButtonContainer>
           )
           : ''}
@@ -65,9 +61,7 @@ export const HomeSection = ({ theme }) => (
         ? (
           <Styled.ButtonContainer>
             <ButtonShape background href="https://tinyurl.com/EoBryanDev">Let&apos;s Talk...</ButtonShape>
-            <Anchor targetOffset="50" className="portfolio">
-              <Link href="#section5" title="Portfolio" />
-            </Anchor>
+            <a href="#section5" className="portfolio">Portfolio</a>
           </Styled.ButtonContainer>
         )
         : ''}
@@ -92,4 +86,5 @@ export const HomeSection = ({ theme }) => (
 
 HomeSection.propTypes = {
   theme: P.string.isRequired,
+  pageSize: P.string.isRequired,
 };

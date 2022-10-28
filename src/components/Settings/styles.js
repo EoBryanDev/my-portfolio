@@ -10,7 +10,6 @@ export const Container = styled.div`
     flex-wrap: wrap;
     top: 60px;
     z-index: 1;
-    right: 0;
     backdrop-filter: blur(15px);
     min-height: 100vh;
     min-width: 100vw;

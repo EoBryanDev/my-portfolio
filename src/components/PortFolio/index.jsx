@@ -65,8 +65,8 @@ export const PortFolio = () => (
                   <p>{item.desc}</p>
                   <div className="buttons">
                     <IconContext.Provider value={{ size: '35%', className: 'react-icons' }}>
-                      <a href="w"><BsGithub /></a>
-                      <a href="w"><BsBoxArrowUpRight /></a>
+                      <a href={item.urlGit}><BsGithub /></a>
+                      <a href={item.urlSite}><BsBoxArrowUpRight /></a>
                     </IconContext.Provider>
                   </div>
                 </div>

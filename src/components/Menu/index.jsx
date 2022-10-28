@@ -1,4 +1,3 @@
-import { Anchor } from 'antd';
 import React from 'react';
 import P from 'prop-types';
 
@@ -10,37 +9,32 @@ import { MdWork, MdSend } from 'react-icons/md';
 import * as Styled from './styles';
 import { MenuLink } from '../MenuLink';
 
-const { Link } = Anchor;
-
 export const Menu = ({ menuClose }) => (
   <Styled.MenuComponent menuClose={menuClose}>
-    <Anchor targetOffset="50">
-      <MenuLink>
-        <FiHome />
-        <Link href="#section1" title="Home" />
-      </MenuLink>
-      <MenuLink>
-        <HiIdentification />
-        <Link href="#section2" title="About" />
-      </MenuLink>
-      <MenuLink>
-        <GoGraph />
-        <Link href="#section3" title="Skills" />
-      </MenuLink>
-      <MenuLink>
-        <MdWork />
-        <Link href="#section4" title="Services" />
-      </MenuLink>
-      <MenuLink>
-        <HiPhotograph />
-        <Link href="#section5" title="Portfolio" />
-      </MenuLink>
-      <MenuLink>
-        <MdSend />
-        <Link href="#section6" title="Contact" />
-      </MenuLink>
-
-    </Anchor>
+    <MenuLink>
+      <FiHome />
+      <a href="#section1">Home</a>
+    </MenuLink>
+    <MenuLink>
+      <HiIdentification />
+      <a href="#section2">About</a>
+    </MenuLink>
+    <MenuLink>
+      <GoGraph />
+      <a href="#section3">Skills</a>
+    </MenuLink>
+    <MenuLink>
+      <MdWork />
+      <a href="#section4">Services</a>
+    </MenuLink>
+    <MenuLink>
+      <HiPhotograph />
+      <a href="#section5">Portfolio</a>
+    </MenuLink>
+    <MenuLink>
+      <MdSend />
+      <a href="#section6">Contact</a>
+    </MenuLink>
   </Styled.MenuComponent>
 );
 

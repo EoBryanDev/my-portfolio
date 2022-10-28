@@ -9,6 +9,10 @@ export const Item = styled.li`
     list-style: none;
     padding: ${theme.spacings.paddings.medium};
     margin: ${theme.spacings.margins.medium};
-    
+    transition: 0.5s ease-in-out;
+
+    &:hover{
+      color: ${theme.name === 'dark' ? theme.colors.backgroundColor : theme.colors.darkColor};
+    }
   `}
 `;

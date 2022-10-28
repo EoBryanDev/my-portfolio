@@ -1,9 +1,16 @@
 import React from 'react';
 
 import { IconContext } from 'react-icons';
-import { MdClear, MdReorder, MdMoreVert } from 'react-icons/md';
+import {
+  MdClear, MdReorder, MdMoreVert, MdWork, MdSend,
+} from 'react-icons/md';
+import { FiHome } from 'react-icons/fi';
+import { HiIdentification, HiPhotograph } from 'react-icons/hi';
+import { GoGraph } from 'react-icons/go';
+
 import P from 'prop-types';
 import * as Styled from './styles';
+import { MenuLink } from '../MenuLink';
 
 export const Navbar = ({
   menuClose,
@@ -11,6 +18,7 @@ export const Navbar = ({
   settingsClose,
   setSettingsClose,
   theme,
+  pageSize,
 }) => (
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   <IconContext.Provider value={{ size: '1.5em' }}>
@@ -21,21 +29,43 @@ export const Navbar = ({
 
       <p>It&apos;s the Bryan</p>
       <div>
-        <div>
-          <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>skills</li>
-            <li>services</li>
-            <li>portfolio</li>
-            <li>contact</li>
-          </ul>
-        </div>
-        <div>
-          {menuClose
-            ? <MdReorder onClick={() => setMenuClose(!menuClose)} />
-            : <MdClear onClick={() => setMenuClose(!menuClose)} />}
-        </div>
+        {pageSize > 1200 ? (
+          <div>
+            <ul>
+              <MenuLink>
+                <FiHome />
+                <a href="#section1">Home</a>
+              </MenuLink>
+              <MenuLink>
+                <HiIdentification />
+                <a href="#section2">About</a>
+              </MenuLink>
+              <MenuLink>
+                <GoGraph />
+                <a href="#section3">Skills</a>
+              </MenuLink>
+              <MenuLink>
+                <MdWork />
+                <a href="#section4">Services</a>
+              </MenuLink>
+              <MenuLink>
+                <HiPhotograph />
+                <a href="#section5">Portfolio</a>
+              </MenuLink>
+              <MenuLink>
+                <MdSend />
+                <a href="#section6">Contact</a>
+              </MenuLink>
+            </ul>
+          </div>
+        )
+          : (
+            <div>
+              {menuClose
+                ? <MdReorder onClick={() => setMenuClose(!menuClose)} />
+                : <MdClear onClick={() => setMenuClose(!menuClose)} />}
+            </div>
+          )}
         <div>
           {settingsClose
             ? <MdMoreVert onClick={() => setSettingsClose(!settingsClose)} />
@@ -52,4 +82,5 @@ Navbar.propTypes = {
   settingsClose: P.bool.isRequired,
   setSettingsClose: P.node.isRequired,
   theme: P.string.isRequired,
+  pageSize: P.string.isRequired,
 };

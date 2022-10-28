@@ -104,6 +104,7 @@ span h1{
 `}
 `;
 export const ImgContainer = styled.div`
+
 @media only screen and (min-width: ${({ theme }) => theme.deviceSizes.tablet}){
   display: flex;
   justify-content: flex-end;
@@ -174,7 +175,7 @@ export const Bloob = styled.div`
   ${({ theme }) => css`
     position: absolute;
     z-index: -1;
-    top: 110%;
+    top: 80%;
     right: 40px;
     width: 240px;
     height: 300px;
@@ -195,7 +196,7 @@ export const Bloob = styled.div`
     @media only screen and (min-width: ${theme.deviceSizes.desktop}) {
       width: 440px;
       height: 540px;
-      top: 35%;
+      top: 25%;
       right: 10%;
     }
 

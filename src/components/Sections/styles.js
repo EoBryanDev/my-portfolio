@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.section`
   ${({ theme, background, int }) => css`
+    max-width: 100%;
     min-height: ${int ? '100vh' : '50vh'};
     padding: ${theme.spacings.paddings.xlarge};
     background: ${background ? '' : theme.colors.secondaryColor};

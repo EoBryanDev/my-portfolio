@@ -7,7 +7,7 @@ export const NavgationBar = styled.nav`
     z-index: 1;
     width:100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
     background: ${theme.name === 'dark' ? theme.colors.primaryColor : theme.colors.whiteColor};
@@ -35,6 +35,7 @@ export const NavgationBar = styled.nav`
     }
     & div {
       display: flex;
+      align-items: center;
       padding: 3px;
     }
     ul{

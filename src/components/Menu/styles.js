@@ -10,18 +10,14 @@ export const MenuComponent = styled.ul`
   justify-content: space-around;
   padding: ${theme.spacings.paddings.medium};
   backdrop-filter: blur(5px);
-  background: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.lightColor};
+  background: ${theme.name === 'dark' ? theme.colors.secondaryColor : theme.colors.thirdColor};
   color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.blackColor};
   transition: all 0.3s ease-in-out;
   width:100%;
+  flex-wrap: wrap;
 
-  div{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
   `}
+
 
 
 `;

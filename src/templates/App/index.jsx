@@ -1,26 +1,27 @@
 /* eslint-disable no-unused-expressions */
 import React, { useState } from 'react';
+
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from '../../styles/global-styles';
 
 import lightTheme from '../../styles/lightTheme';
 import darkTheme from '../../styles/darkTheme';
 
-import { HomeSection } from '../../components/Home';
-import { Introducing } from '../../components/Introducing';
-
 import { Menu } from '../../components/Menu';
 import { Navbar } from '../../components/Navbar';
 import { Sections } from '../../components/Sections';
-import GoToTop from '../../components/GoToTop';
-import { Services } from '../../components/Services---';
+import { HomeSection } from '../../components/Home';
+import { Introducing } from '../../components/Introducing';
 import { Skills } from '../../components/Skills';
+import { Services } from '../../components/Services---';
 import { PortFolio } from '../../components/PortFolio';
-import { Footer } from '../../components/Footer';
 import { ContactMe } from '../../components/ContactMe';
+import { Footer } from '../../components/Footer';
+import GoToTop from '../../components/GoToTop';
 import Settings from '../../components/Settings';
-import { GlobalStyles } from '../../styles/global-styles';
 
 function Home() {
+  const [pageSize, setPageSize] = useState(window.innerWidth);
   const [menuClose, setMenuClose] = useState(true);
   const [settingsClose, setSettingsClose] = useState(true);
 
@@ -28,6 +29,14 @@ function Home() {
 
   const onChangeTheme = () => {
     setTheme(theme.name === 'light' ? darkTheme : lightTheme);
+  };
+  /* useEffect(() => {
+    setPageSize(window.innerWidth);
+  }, [pageSize]); */
+
+  window.onresize = () => {
+    setPageSize(window.innerWidth);
+    setMenuClose(true);
   };
   return (
     <ThemeProvider theme={theme}>
@@ -37,11 +46,12 @@ function Home() {
         settingsClose={settingsClose}
         setSettingsClose={setSettingsClose}
         theme={theme.name}
+        pageSize={pageSize}
       />
       <Menu menuClose={menuClose} />
       <Settings settingsClose={settingsClose} onChangeTheme={onChangeTheme} />
       <Sections background id="section1" int>
-        <HomeSection theme={theme} />
+        <HomeSection theme={theme} pageSize={pageSize} />
       </Sections>
       <Sections background={false} id="section2" int>
         <Introducing background />
