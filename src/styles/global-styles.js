@@ -28,7 +28,6 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
   }
   *::selection{
     color: ${({ theme }) => (theme.name === 'dark' ? theme.colors.blackColor : theme.colors.whiteColor)};
@@ -108,8 +107,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #section1,#section2,#section3,#section4,#section5,#section6{
- padding: 70px 0;
+    padding: 70px 10px;
 
-}
+  }
   `}
 `;

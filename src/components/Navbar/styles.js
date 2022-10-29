@@ -15,8 +15,9 @@ export const NavgationBar = styled.nav`
     color: ${theme.name === 'dark' ? theme.colors.lightColor : theme.colors.secondaryColor};
     padding: 0 ${theme.spacings.paddings.small};
     border-bottom: 1px solid ${theme.colors.lightColor};
-    box-shadow:  ${theme.name === 'dark' ? theme.colors.lightColor
-    : theme.colors.darkColor} 1px 1px 10px 1px;
+    box-shadow:  0 1px 20px ${theme.name === 'dark' ? theme.colors.lightColor
+    : theme.colors.darkColor};
+
     img{
       padding: 10px;
       width:130px;

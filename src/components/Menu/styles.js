@@ -16,6 +16,10 @@ export const MenuComponent = styled.ul`
   width:100%;
   flex-wrap: wrap;
 
+  a, a:visited, a:active{
+    color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.blackColor};
+  }
+
   `}
 
 

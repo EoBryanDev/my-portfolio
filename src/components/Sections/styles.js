@@ -2,11 +2,12 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.section`
   ${({ theme, background, int }) => css`
-    max-width: 100%;
+    max-width: 100vw;
     min-height: ${int ? '100vh' : '50vh'};
     padding: ${theme.spacings.paddings.xlarge};
     background: ${background ? '' : theme.colors.secondaryColor};
     background: ${theme.name === 'dark' && background === false && (theme.colors.backgroundColor)};
     margin: ${theme.spacings.margins.xlarge} 0;
+
   `}
 `;

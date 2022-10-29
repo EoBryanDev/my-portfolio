@@ -158,7 +158,7 @@ export const portFolio = [
     desc: 'Really basic App which brings data from a fake api --JSON-SERVER-- to fill the Burguer Shop App and allowing CRUD operations.',
     urlGit: 'https://github.com/EoBryanDev/fake-api-burguer-shop',
     urlSite: 'https://fake-api-burguer-shop.herokuapp.com/',
-    gridType: 'tall',
+    gridType: 'wide',
     techs: [
       {
         name: 'js',
@@ -176,10 +176,10 @@ export const portFolio = [
     id: 7,
     title: 'To do List',
     urlBack: 'https://img.freepik.com/vetores-gratis/ilustracao-do-conceito-de-manutencao_114360-391.jpg?w=2000',
-    desc: 'Brief description about the project made',
+    desc: "This project's being build",
     urlGit: 'unvailable',
     urlSite: 'unvailable',
-    gridType: 'wide',
+    gridType: 'ultraWide',
     techs: [
       {
         name: 'html',
