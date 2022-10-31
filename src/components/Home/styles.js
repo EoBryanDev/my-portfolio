@@ -142,7 +142,11 @@ export const ButtonContainer = styled.div`
     display: none;
   }
   a{
+    color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.blackColor};
     font-size:16px;
+  }
+  a:visited, a:active{
+    color: ${theme.name === 'dark' ? theme.colors.darkColor : theme.colors.blackColor};
   }
   `}
 `;
